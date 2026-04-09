@@ -443,7 +443,7 @@ export default function AxisSchoolSecurityBrochure() {
       This not only strengthens security—it reduces front office interruptions, eliminates guesswork for staff, and ensures that every person entering the building is accounted for. In a school environment, that translates directly to safer students, more efficient operations, and greater peace of mind for everyone involved.
     </p>
   </div>
-
+</div>
                 <div className="mt-8 flex flex-wrap gap-3">
                   {zone.system.map((item) => (
                     <div key={item} className="rounded-full border border-white/10 bg-black/35 px-4 py-2 text-sm font-bold text-zinc-100">
