@@ -503,23 +503,26 @@ export default function AxisSchoolSecurityBrochure() {
                 <div className="absolute left-[16%] top-[31%] h-[14%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
                 <div className="absolute left-[16%] top-[48%] h-[20%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
 
-<div className="absolute left-[46%] top-[12%] h-[30%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-<div className="absolute left-[49%] top-[17%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+{/* Main Hallway */}
+<div className="absolute left-[43%] top-[12%] h-[22%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+<div className="absolute left-[46%] top-[17%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
   Main Hallway
 </div>
-<div className="absolute left-[50%] top-[42%] h-[30%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[50%] top-[25%] h-[8%] w-[8%] rounded-full border border-white/10 bg-black/25" />
 
-<div className="absolute left-[46%] top-[34%] h-[18%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-<div className="absolute left-[49%] top-[39%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+{/* Admin Office */}
+<div className="absolute left-[43%] top-[40%] h-[18%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+<div className="absolute left-[47%] top-[45%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
   Admin Office
 </div>
-<div className="absolute left-[50%] top-[44%] h-[10%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[47%] top-[50%] h-[10%] w-[14%] rounded-xl border border-white/10 bg-black/25" />
 
-<div className="absolute left-[73%] top-[16%] h-[28%] w-[20%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-<div className="absolute left-[75%] top-[21%] text-[11px] font-bold uppercase tracking-[0.14em] text-zinc-400">
+{/* Gym / Event Space */}
+<div className="absolute left-[72%] top-[16%] h-[22%] w-[20%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+<div className="absolute left-[74%] top-[21%] text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-400">
   Gym / Event Space
 </div>
-<div className="absolute left-[77%] top-[28%] h-[10%] w-[12%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[78%] top-[28%] h-[10%] w-[10%] rounded-xl border border-white/10 bg-black/25" />
                 {Object.entries(buildingZones).map(([key, item]) => (
                   <button
                     key={key}
