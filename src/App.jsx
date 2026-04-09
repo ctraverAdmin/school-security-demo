@@ -503,39 +503,23 @@ export default function AxisSchoolSecurityBrochure() {
                 <div className="absolute left-[16%] top-[31%] h-[14%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
                 <div className="absolute left-[16%] top-[48%] h-[20%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[41%] top-[44%] h-[8%] w-[12%] rounded-full border border-white/10 bg-white/5" />
-                <div className="absolute left-[43%] top-[46.5%] text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500">
-                  Hallway
-                </div>
-
                 <div className="absolute left-[46%] top-[14%] h-[28%] w-[18%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-                <div className="absolute left-[48.5%] top-[18%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
-                  Main Hallway
-                </div>
-                <div className="absolute left-[49%] top-[62%] h-[16%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[48.5%] top-[18%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+  Main Hallway
+</div>
+<div className="absolute left-[49%] top-[62%] h-[16%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[70%] top-[16%] h-[28%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-                <div className="absolute left-[74%] top-[20%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
-                  Admin Office
-                </div>
-                <div className="absolute left-[49%] top-[62%] h-[16%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[70%] top-[16%] h-[28%] w-[18%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+<div className="absolute left-[72%] top-[20%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+  Admin Office
+</div>
+<div className="absolute left-[73%] top-[27%] h-[10%] w-[12%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[70%] top-[16%] h-[28%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-                <div className="absolute left-[74%] top-[20%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
-                  Gym
-                </div>
-                <div className="absolute left-[74%] top-[27%] h-[10%] w-[14%] rounded-xl border border-white/10 bg-black/25" />
-
-                <div className="absolute left-[69%] top-[63%] h-[20%] w-[26%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-                <div className="absolute left-[72%] top-[67%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
-                  Parking Lot
-                </div>
-                <div className="absolute left-[72%] top-[73%] h-[6%] w-[18%] rounded-xl border border-white/10 bg-black/25" />
-
-                <div className="absolute left-[41%] top-[38%] h-[2px] w-[8%] bg-white/10" />
-                <div className="absolute left-[60%] top-[28%] h-[2px] w-[10%] bg-white/10" />
-                <div className="absolute left-[56%] top-[42%] h-[14%] w-[2px] bg-white/10" />
-
+<div className="absolute left-[69%] top-[63%] h-[20%] w-[26%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+<div className="absolute left-[72%] top-[67%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+  Parking Lot
+</div>
+<div className="absolute left-[72%] top-[73%] h-[6%] w-[18%] rounded-xl border border-white/10 bg-black/25" />
                 {Object.entries(buildingZones).map(([key, item]) => (
                   <button
                     key={key}
