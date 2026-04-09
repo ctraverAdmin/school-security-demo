@@ -514,8 +514,8 @@ export default function AxisSchoolSecurityBrochure() {
                 </div>
                 <div className="absolute left-[49%] top-[62%] h-[16%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-                <div className="absolute left-[46%] top-[56%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+                <div className="absolute left-[70%] top-[16%] h-[28%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+                <div className="absolute left-[74%] top-[20%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
                   Admin Office
                 </div>
                 <div className="absolute left-[49%] top-[62%] h-[16%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
