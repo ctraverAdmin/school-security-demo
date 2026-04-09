@@ -396,7 +396,7 @@ export default function AxisSchoolSecurityBrochure() {
 
               <div className="relative h-full min-h-[500px] rounded-[1.5rem] border border-white/10 bg-black/30">
                 <div className="absolute left-[12%] top-[20%] h-[56%] w-[26%] rounded-2xl border border-white/10 bg-white/5" />
-                <div className="absolute left-[40%] top-[12%] h-[28%] w-[18%] rounded-2xl border border-white/10 bg-white/5" />
+                <div className="absolute left-[44%] top-[12%] h-[28%] w-[18%] rounded-2xl border border-white/10 bg-white/5" />
                 <div className="absolute left-[38%] top-[44%] h-[34%] w-[22%] rounded-2xl border border-white/10 bg-white/5" />
                 <div className="absolute left-[64%] top-[14%] h-[26%] w-[24%] rounded-2xl border border-white/10 bg-white/5" />
                 <div className="absolute left-[64%] top-[54%] h-[24%] w-[26%] rounded-2xl border border-white/10 bg-white/5" />
