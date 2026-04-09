@@ -503,11 +503,11 @@ export default function AxisSchoolSecurityBrochure() {
                 <div className="absolute left-[16%] top-[31%] h-[14%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
                 <div className="absolute left-[16%] top-[48%] h-[20%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[46%] top-[12%] h-[18%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+<div className="absolute left-[46%] top-[12%] h-[30%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
 <div className="absolute left-[49%] top-[17%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
   Main Hallway
 </div>
-<div className="absolute left-[50%] top-[22%] h-[10%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[50%] top-[42%] h-[30%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
 
 <div className="absolute left-[46%] top-[34%] h-[18%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
 <div className="absolute left-[49%] top-[39%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
