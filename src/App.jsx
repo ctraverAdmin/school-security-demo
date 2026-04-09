@@ -59,8 +59,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Your main entrance is the first and often most vulnerable point of access into the building. By combining visitor management, vestibule control, video intercom, and front-door camera coverage, staff can verify who is requesting access before unlocking doors and maintain a clear record of who enters the building.",
       result:
         "Office staff can verify, communicate, and unlock only when appropriate.",
-      x: "24%",
-      y: "52%",
+      x: "25%",
+      y: "50%",
     },
     hallway: {
       name: "Main Hallway",
@@ -77,8 +77,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Hallways are where daily movement, supervision, and incident visibility all come together. With the right mix of cameras, audio announcements, and alert routing, your team can quickly verify activity, guide students, and respond to issues before they disrupt the school day.",
       result:
         "Teams can monitor flow, investigate behavior, and direct students quickly.",
-      x: "55%",
-      y: "27%",
+      x: "58%",
+      y: "24%",
     },
     admin: {
       name: "Administration Office",
@@ -93,10 +93,9 @@ export default function AxisSchoolSecurityBrochure() {
       ],
       whyItMatters:
         "The administration office is where visibility and decision-making need to come together fast. A unified dashboard gives administrators one place to monitor events, control doors, review alerts, and coordinate communication without losing time switching between systems.",
-      result:
-        "Administrators gain a single place to see events and act fast.",
-      x: "56%",
-      y: "69%",
+      result: "Administrators gain a single place to see events and act fast.",
+      x: "58%",
+      y: "51%",
     },
     gym: {
       name: "Gym / Event Space",
@@ -113,8 +112,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Gyms and event spaces create unique security challenges because they often serve large groups, outside visitors, and after-hours activities. Better coverage, messaging, and scheduled access help your staff maintain control before, during, and after events.",
       result:
         "Large gatherings stay more manageable before, during, and after events.",
-      x: "82%",
-      y: "30%",
+      x: "85%",
+      y: "27%",
     },
     parking: {
       name: "Parking Lot",
@@ -131,8 +130,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Parking lots are critical during arrival, dismissal, and after-hours activity. Strong exterior coverage and event verification give your team better awareness of what is happening outside the building and better information when a response is needed.",
       result:
         "Staff can see what happened outside and react with better information.",
-      x: "81%",
-      y: "73%",
+      x: "80%",
+      y: "76%",
     },
   };
 
