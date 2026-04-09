@@ -502,27 +502,60 @@ export default function AxisSchoolSecurityBrochure() {
                 </div>
                 <div className="absolute left-[16%] top-[31%] h-[14%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
                 <div className="absolute left-[16%] top-[48%] h-[20%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
+{/* Main Entrance */}
+<div className="absolute left-[12%] top-[20%] h-[58%] w-[28%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
+<div className="absolute left-[16%] top-[24%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
+  Main Entrance
+</div>
+<div className="absolute left-[15.5%] top-[31%] h-[14%] w-[19%] rounded-xl border border-red-400/30 bg-black/25" />
+<div className="absolute left-[15.5%] top-[49%] h-[20%] w-[19%] rounded-xl border border-red-400/30 bg-black/25" />
+
+{/* Main Entrance dot */}
+<div className="absolute left-[20.5%] top-[54.5%] h-[6%] w-[6%] rounded-full border border-red-400/40 bg-black/30" />
+<div className="absolute left-[22.1%] top-[56.1%] h-[2.2%] w-[2.2%] rounded-full bg-amber-400 shadow-[0_0_18px_rgba(250,204,21,0.6)]" />
 
 {/* Main Hallway */}
-<div className="absolute left-[43%] top-[12%] h-[22%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-<div className="absolute left-[46%] top-[17%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
+<div className="absolute left-[46%] top-[10%] h-[20%] w-[24%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
+<div className="absolute left-[49%] top-[15%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
   Main Hallway
 </div>
-<div className="absolute left-[50%] top-[25%] h-[8%] w-[8%] rounded-full border border-white/10 bg-black/25" />
+<div className="absolute left-[53%] top-[20%] h-[8%] w-[8%] rounded-full border border-red-400/40 bg-black/25" />
+<div className="absolute left-[55.2%] top-[22%] h-[2.2%] w-[2.2%] rounded-full bg-amber-400 shadow-[0_0_18px_rgba(250,204,21,0.6)]" />
 
 {/* Admin Office */}
-<div className="absolute left-[43%] top-[40%] h-[18%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-<div className="absolute left-[47%] top-[45%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
+<div className="absolute left-[46%] top-[39%] h-[18%] w-[24%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
+<div className="absolute left-[50%] top-[44%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
   Admin Office
 </div>
-<div className="absolute left-[47%] top-[50%] h-[10%] w-[14%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[50%] top-[50%] h-[10%] w-[14%] rounded-xl border border-red-400/30 bg-black/25" />
+
+{/* Admin Office dot */}
+<div className="absolute left-[57%] top-[66%] h-[4.5%] w-[4.5%] rounded-full border border-red-400/40 bg-black/30" />
+<div className="absolute left-[58.25%] top-[67.2%] h-[1.6%] w-[1.6%] rounded-full bg-amber-400 shadow-[0_0_18px_rgba(250,204,21,0.6)]" />
 
 {/* Gym / Event Space */}
-<div className="absolute left-[72%] top-[16%] h-[22%] w-[20%] rounded-[1.5rem] border border-white/10 bg-white/5" />
-<div className="absolute left-[74%] top-[21%] text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-400">
+<div className="absolute left-[75%] top-[14%] h-[22%] w-[18%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
+<div className="absolute left-[76.5%] top-[19%] text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-400">
   Gym / Event Space
 </div>
-<div className="absolute left-[78%] top-[28%] h-[10%] w-[10%] rounded-xl border border-white/10 bg-black/25" />
+<div className="absolute left-[81%] top-[26%] h-[10%] w-[10%] rounded-xl border border-red-400/30 bg-black/25" />
+<div className="absolute left-[82.2%] top-[24.8%] h-[4.5%] w-[4.5%] rounded-full border border-red-400/40 bg-black/30" />
+<div className="absolute left-[83.45%] top-[26%] h-[1.6%] w-[1.6%] rounded-full bg-amber-400 shadow-[0_0_18px_rgba(250,204,21,0.6)]" />
+
+{/* Parking Lot */}
+<div className="absolute left-[72%] top-[68%] h-[16%] w-[22%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
+<div className="absolute left-[76%] top-[73%] text-[10px] font-bold uppercase tracking-[0.14em] text-zinc-400">
+  Parking Lot
+</div>
+<div className="absolute left-[81%] top-[77.5%] h-[4.5%] w-[4.5%] rounded-full border border-red-400/40 bg-black/30" />
+<div className="absolute left-[82.25%] top-[78.7%] h-[1.6%] w-[1.6%] rounded-full bg-amber-400 shadow-[0_0_18px_rgba(250,204,21,0.6)]" />
+
+{/* Connector lines */}
+<div className="absolute left-[40%] top-[46%] h-[2px] w-[6%] bg-red-500/30" />
+<div className="absolute left-[70%] top-[20%] h-[2px] w-[5%] bg-red-500/30" />
+<div className="absolute left-[58%] top-[57%] h-[9%] w-[2px] bg-red-500/30" />
+
+
                 {Object.entries(buildingZones).map(([key, item]) => (
                   <button
                     key={key}
