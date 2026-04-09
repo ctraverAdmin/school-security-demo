@@ -59,79 +59,57 @@ export default function AxisSchoolSecurityBrochure() {
         "Your main entrance is the first and often most vulnerable point of access into the building. By combining visitor management, vestibule control, video intercom, and front-door camera coverage, staff can verify who is requesting access before unlocking doors and maintain a clear record of who enters the building.",
       result:
         "Office staff can verify, communicate, and unlock only when appropriate.",
-      x: "25%",
-      y: "50%",
+      x: "24%",
+      y: "52%",
     },
     hallway: {
       name: "Main Hallway",
       risk: "Movement between classrooms and common spaces",
       focus:
         "Hallway cameras, incident visibility, paging, and targeted messaging.",
-      system: [
-        "Indoor cameras",
-        "Audio announcements",
-        "Alert routing",
-        "Incident review",
-      ],
+      system: ["Indoor cameras", "Audio announcements", "Alert routing", "Incident review"],
       whyItMatters:
         "Hallways are where daily movement, supervision, and incident visibility all come together. With the right mix of cameras, audio announcements, and alert routing, your team can quickly verify activity, guide students, and respond to issues before they disrupt the school day.",
-      result:
-        "Teams can monitor flow, investigate behavior, and direct students quickly.",
-      x: "58%",
-      y: "24%",
+      result: "Teams can monitor flow, investigate behavior, and direct students quickly.",
+      x: "55%",
+      y: "27%",
     },
     admin: {
       name: "Administration Office",
       risk: "Decision point during incidents",
       focus:
         "Unified dashboard, event monitoring, remote door control, and live response.",
-      system: [
-        "Monitoring station",
-        "Remote unlock/lock",
-        "Alert view",
-        "Communications",
-      ],
+      system: ["Monitoring station", "Remote unlock/lock", "Alert view", "Communications"],
       whyItMatters:
         "The administration office is where visibility and decision-making need to come together fast. A unified dashboard gives administrators one place to monitor events, control doors, review alerts, and coordinate communication without losing time switching between systems.",
       result: "Administrators gain a single place to see events and act fast.",
-      x: "58%",
-      y: "51%",
+      x: "56%",
+      y: "69%",
     },
     gym: {
       name: "Gym / Event Space",
       risk: "Crowded events and after-hours use",
       focus:
         "Large-area coverage, event messaging, access scheduling, and perimeter awareness.",
-      system: [
-        "Wide-area cameras",
-        "Scheduled access",
-        "PA / audio",
-        "After-hours monitoring",
-      ],
+      system: ["Wide-area cameras", "Scheduled access", "PA / audio", "After-hours monitoring"],
       whyItMatters:
         "Gyms and event spaces create unique security challenges because they often serve large groups, outside visitors, and after-hours activities. Better coverage, messaging, and scheduled access help your staff maintain control before, during, and after events.",
       result:
         "Large gatherings stay more manageable before, during, and after events.",
-      x: "85%",
-      y: "27%",
+      x: "82%",
+      y: "30%",
     },
     parking: {
       name: "Parking Lot",
       risk: "Arrival, dismissal, and exterior activity",
       focus:
         "Exterior cameras, perimeter awareness, incident verification, and response support.",
-      system: [
-        "Outdoor cameras",
-        "Perimeter visibility",
-        "Event search",
-        "Response support",
-      ],
+      system: ["Outdoor cameras", "Perimeter visibility", "Event search", "Response support"],
       whyItMatters:
         "Parking lots are critical during arrival, dismissal, and after-hours activity. Strong exterior coverage and event verification give your team better awareness of what is happening outside the building and better information when a response is needed.",
-      result:
-        "Staff can see what happened outside and react with better information.",
-      x: "80%",
-      y: "76%",
+      result: "Staff can see what happened outside and react with better information.",
+      x: "81%",
+      y: "73%",
     },
   };
 
@@ -172,11 +150,7 @@ export default function AxisSchoolSecurityBrochure() {
       title: "After-Hours Protection Demo",
       summary:
         "Stay in control of entrances, athletic spaces, and parking areas even after hours with clear visibility and response tools.",
-      stats: [
-        "Scheduled door control",
-        "Exterior monitoring",
-        "Recorded event review",
-      ],
+      stats: ["Scheduled door control", "Exterior monitoring", "Recorded event review"],
       timeline: [
         "Door event occurs",
         "Camera verifies activity",
@@ -260,16 +234,9 @@ export default function AxisSchoolSecurityBrochure() {
   return (
     <div className="min-h-screen overflow-hidden bg-black text-white">
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-35"
-        >
+        <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover opacity-35">
           <source src="/school-security-demo.mp4" type="video/mp4" />
         </video>
-
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_35%),linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.92))]" />
 
         <div className="relative w-full px-6 py-20 md:px-10">
@@ -304,8 +271,7 @@ export default function AxisSchoolSecurityBrochure() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 md:text-xl">
-                See how cameras, doors, intercoms, and audio work together across your school
-                building.
+                See how cameras, doors, intercoms, and audio work together across your school building.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -385,8 +351,7 @@ export default function AxisSchoolSecurityBrochure() {
                 </div>
                 <p className="mt-2 text-sm leading-6 text-zinc-100">
                   This gives you a clear way to see risk, understand how your building responds,
-                  and feel confident in how your team can act without getting buried in technical
-                  details.
+                  and feel confident in how your team can act without getting buried in technical details.
                 </p>
               </div>
             </motion.div>
@@ -530,40 +495,46 @@ export default function AxisSchoolSecurityBrochure() {
             <div className="relative min-h-[560px] rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,#1c1c1f,#0c0c0d)] p-6 shadow-2xl">
               <div className="absolute inset-6 rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]" />
 
-              <div className="relative h-full min-h-[500px] rounded-[1.5rem] border border-red-500/20 bg-black/30">
-                <div className="absolute left-[11%] top-[18%] h-[54%] w-[28%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
-                <div className="absolute left-[15%] top-[22%] text-[10px] font-bold uppercase tracking-[0.08em] text-zinc-400">
+              <div className="relative h-full min-h-[500px] rounded-[1.5rem] border border-white/10 bg-black/30">
+                <div className="absolute left-[13%] top-[22%] h-[60%] w-[28%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+                <div className="absolute left-[16%] top-[26%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
                   Main Entrance
                 </div>
-                <div className="absolute left-[15%] top-[30%] h-[13%] w-[18%] rounded-xl border border-red-400/30 bg-black/25" />
-                <div className="absolute left-[15%] top-[48%] h-[19%] w-[18%] rounded-xl border border-red-400/30 bg-black/25" />
+                <div className="absolute left-[16%] top-[31%] h-[14%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
+                <div className="absolute left-[16%] top-[48%] h-[20%] w-[20%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[47%] top-[10%] h-[18%] w-[24%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
-                <div className="absolute left-[50%] top-[14%] text-[10px] font-bold uppercase tracking-[0.08em] text-zinc-400">
+                <div className="absolute left-[41%] top-[44%] h-[8%] w-[12%] rounded-full border border-white/10 bg-white/5" />
+                <div className="absolute left-[43%] top-[46.5%] text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500">
+                  Hallway
+                </div>
+
+                <div className="absolute left-[46%] top-[14%] h-[28%] w-[18%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+                <div className="absolute left-[48.5%] top-[18%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
                   Main Hallway
                 </div>
-                <div className="absolute left-[54%] top-[19%] h-[6.5%] w-[6.5%] rounded-full border border-red-400/40 bg-black/25" />
+                <div className="absolute left-[49%] top-[24%] h-[10%] w-[12%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[47%] top-[38%] h-[18%] w-[24%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
-                <div className="absolute left-[50.5%] top-[42%] text-[10px] font-bold uppercase tracking-[0.08em] text-zinc-400">
+                <div className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+                <div className="absolute left-[46%] top-[56%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
                   Admin Office
                 </div>
-                <div className="absolute left-[51%] top-[50%] h-[10%] w-[12%] rounded-xl border border-red-400/30 bg-black/25" />
+                <div className="absolute left-[46%] top-[62%] h-[16%] w-[16%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[76%] top-[14%] h-[20%] w-[18%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
-                <div className="absolute left-[77.5%] top-[18.5%] text-[10px] font-bold uppercase tracking-[0.04em] text-zinc-400">
-                  Gym / Event Space
+                <div className="absolute left-[70%] top-[16%] h-[28%] w-[24%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+                <div className="absolute left-[74%] top-[20%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+                  Gym
                 </div>
-                <div className="absolute left-[81.5%] top-[25.5%] h-[9%] w-[10%] rounded-xl border border-red-400/30 bg-black/25" />
+                <div className="absolute left-[74%] top-[27%] h-[10%] w-[14%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[73%] top-[69%] h-[14%] w-[20%] rounded-[1.5rem] border border-red-500/40 bg-white/5" />
-                <div className="absolute left-[78%] top-[74%] text-[10px] font-bold uppercase tracking-[0.04em] text-zinc-400">
+                <div className="absolute left-[69%] top-[63%] h-[20%] w-[26%] rounded-[1.5rem] border border-white/10 bg-white/5" />
+                <div className="absolute left-[72%] top-[67%] text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
                   Parking Lot
                 </div>
+                <div className="absolute left-[72%] top-[73%] h-[6%] w-[18%] rounded-xl border border-white/10 bg-black/25" />
 
-                <div className="absolute left-[39%] top-[47%] h-[2px] w-[8%] bg-red-500/30" />
-                <div className="absolute left-[71%] top-[19%] h-[2px] w-[5%] bg-red-500/30" />
-                <div className="absolute left-[58%] top-[56%] h-[7%] w-[2px] bg-red-500/30" />
+                <div className="absolute left-[41%] top-[38%] h-[2px] w-[8%] bg-white/10" />
+                <div className="absolute left-[60%] top-[28%] h-[2px] w-[10%] bg-white/10" />
+                <div className="absolute left-[56%] top-[42%] h-[14%] w-[2px] bg-white/10" />
 
                 {Object.entries(buildingZones).map(([key, item]) => (
                   <button
@@ -574,9 +545,7 @@ export default function AxisSchoolSecurityBrochure() {
                   >
                     <div
                       className={`relative flex h-6 w-6 items-center justify-center rounded-full border-4 ${
-                        selectedZone === key
-                          ? "border-amber-300 bg-amber-300"
-                          : "border-white bg-black"
+                        selectedZone === key ? "border-amber-300 bg-amber-300" : "border-white bg-black"
                       }`}
                     >
                       <div
@@ -708,8 +677,7 @@ export default function AxisSchoolSecurityBrochure() {
                       </div>
                       <div className="mt-3 text-3xl font-black text-white">Axis Cloud Connect</div>
                       <div className="mt-3 text-sm leading-7 text-zinc-200">
-                        Managed services, remote connectivity, lifecycle workflows, and secure
-                        access.
+                        Managed services, remote connectivity, lifecycle workflows, and secure access.
                       </div>
                     </div>
                   </div>
@@ -727,9 +695,7 @@ export default function AxisSchoolSecurityBrochure() {
                         <div className="rounded-xl bg-black/35 px-3 py-3">Anywhere access</div>
                         <div className="rounded-xl bg-black/35 px-3 py-3">Simplified onboarding</div>
                         <div className="rounded-xl bg-black/35 px-3 py-3">Proactive updates</div>
-                        <div className="rounded-xl bg-black/35 px-3 py-3">
-                          Scalable multi-site management
-                        </div>
+                        <div className="rounded-xl bg-black/35 px-3 py-3">Scalable multi-site management</div>
                       </div>
                     </div>
                   </div>
@@ -769,9 +735,9 @@ export default function AxisSchoolSecurityBrochure() {
                   </div>
                   <h3 className="mt-3 text-3xl font-black">{cloud.title}</h3>
                   <p className="mt-4 text-lg leading-8 text-zinc-200">
-                    This gives your team easier access to critical information, better visibility
-                    across your systems, and the ability to manage everything without being tied to
-                    a single location.
+                    This gives your team easier access to critical information, better visibility across
+                    your systems, and the ability to manage everything without being tied to a single
+                    location.
                   </p>
                   <div className="mt-6 grid gap-3">
                     {cloud.bullets.map((item) => (
@@ -789,8 +755,8 @@ export default function AxisSchoolSecurityBrochure() {
                       Executive takeaway
                     </div>
                     <p className="mt-2 text-sm leading-6 text-zinc-100">
-                      The cloud layer helps position the solution as easier to manage, easier to
-                      access, and better suited for future growth.
+                      The cloud layer helps position the solution as easier to manage, easier to access,
+                      and better suited for future growth.
                     </p>
                   </div>
                 </motion.div>
@@ -811,8 +777,8 @@ export default function AxisSchoolSecurityBrochure() {
             </h2>
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-zinc-300">
               Explore how your system performs during everyday operations, emergency situations, and
-              after-hours activity so you can see exactly how it supports your staff and protects
-              your building.
+              after-hours activity so you can see exactly how it supports your staff and protects your
+              building.
             </p>
           </div>
 
@@ -881,11 +847,9 @@ export default function AxisSchoolSecurityBrochure() {
                       </div>
                     ))}
                   </div>
-
                   <div className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
                     Suggested Talk Track
                   </div>
-
                   <div className="mt-4 grid gap-3">
                     {demo.timeline.map((item, i) => (
                       <div
@@ -917,7 +881,6 @@ export default function AxisSchoolSecurityBrochure() {
                 A better security story for administrators, operations teams, and decision-makers
               </h2>
             </div>
-
             <div className="grid gap-3 sm:grid-cols-2">
               {objectionPoints.map((item) => (
                 <div
