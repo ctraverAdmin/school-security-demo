@@ -57,8 +57,8 @@ export default function AxisSchoolSecurityBrochure() {
     whyItMatters:
       "Your main entrance is the first and often most vulnerable point of access into the building. By combining visitor management, vestibule control, video intercom, and front-door camera coverage, staff can verify who is requesting access before unlocking doors and maintain a clear record of who enters the building.",
     result: "Office staff can verify, communicate, and unlock only when appropriate.",
-    x: "18%",
-    y: "46%",
+    x: "20%",
+    y: "40%",
   },
   hallway: {
     name: "Main Hallway",
