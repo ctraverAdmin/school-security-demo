@@ -48,53 +48,63 @@ export default function AxisSchoolSecurityBrochure() {
     },
   ];
 
-  const buildingZones = {
-    main_entry: {
-      name: "Main Entrance",
-      risk: "High traffic access point",
-      focus: "Visitor management, vestibule control, video intercom, front-door camera coverage",
-      system: ["Door control", "Intercom", "Live video", "Visitor screening"],
-      result: "Office staff can verify, communicate, and unlock only when appropriate.",
-      x: "18%",
-      y: "46%",
-    },
-    hallway: {
-      name: "Main Hallway",
-      risk: "Movement between classrooms and common spaces",
-      focus: "Hallway cameras, incident visibility, paging, and targeted messaging",
-      system: ["Indoor cameras", "Audio announcements", "Alert routing", "Incident review"],
-      result: "Teams can monitor flow, investigate behavior, and direct students quickly.",
-      x: "44%",
-      y: "36%",
-    },
-    admin: {
-      name: "Administration Office",
-      risk: "Decision point during incidents",
-      focus: "Unified dashboard, event monitoring, remote door control, and live response",
-      system: ["Monitoring station", "Remote unlock/lock", "Alert view", "Communications"],
-      result: "Administrators gain a single place to see events and act fast.",
-      x: "32%",
-      y: "68%",
-    },
-    gym: {
-      name: "Gym / Event Space",
-      risk: "Crowded events and after-hours use",
-      focus: "Large-area coverage, event messaging, access scheduling, and perimeter awareness",
-      system: ["Wide-area cameras", "Scheduled access", "PA / audio", "After-hours monitoring"],
-      result: "Large gatherings stay more manageable before, during, and after events.",
-      x: "70%",
-      y: "28%",
-    },
-    parking: {
-      name: "Parking Lot",
-      risk: "Arrival, dismissal, and exterior activity",
-      focus: "Exterior cameras, perimeter awareness, incident verification, and response support",
-      system: ["Outdoor cameras", "Perimeter visibility", "Event search", "Response support"],
-      result: "Staff can see what happened outside and react with better information.",
-      x: "78%",
-      y: "72%",
-    },
-  };
+ const buildingZones = {
+  main_entry: {
+    name: "Main Entrance",
+    risk: "High traffic access point",
+    focus: "Visitor management, vestibule control, video intercom, front-door camera coverage",
+    system: ["Door control", "Intercom", "Live video", "Visitor screening"],
+    whyItMatters:
+      "Your main entrance is the first and often most vulnerable point of access into the building. By combining visitor management, vestibule control, video intercom, and front-door camera coverage, staff can verify who is requesting access before unlocking doors and maintain a clear record of who enters the building.",
+    result: "Office staff can verify, communicate, and unlock only when appropriate.",
+    x: "18%",
+    y: "46%",
+  },
+  hallway: {
+    name: "Main Hallway",
+    risk: "Movement between classrooms and common spaces",
+    focus: "Hallway cameras, incident visibility, paging, and targeted messaging",
+    system: ["Indoor cameras", "Audio announcements", "Alert routing", "Incident review"],
+    whyItMatters:
+      "Hallways are where daily movement, supervision, and incident visibility all come together. With the right mix of cameras, audio announcements, and alert routing, your team can quickly verify activity, guide students, and respond to issues before they disrupt the school day.",
+    result: "Teams can monitor flow, investigate behavior, and direct students quickly.",
+    x: "44%",
+    y: "36%",
+  },
+  admin: {
+    name: "Administration Office",
+    risk: "Decision point during incidents",
+    focus: "Unified dashboard, event monitoring, remote door control, and live response",
+    system: ["Monitoring station", "Remote unlock/lock", "Alert view", "Communications"],
+    whyItMatters:
+      "The administration office is where visibility and decision-making need to come together fast. A unified dashboard gives administrators one place to monitor events, control doors, review alerts, and coordinate communication without losing time switching between systems.",
+    result: "Administrators gain a single place to see events and act fast.",
+    x: "32%",
+    y: "68%",
+  },
+  gym: {
+    name: "Gym / Event Space",
+    risk: "Crowded events and after-hours use",
+    focus: "Large-area coverage, event messaging, access scheduling, and perimeter awareness",
+    system: ["Wide-area cameras", "Scheduled access", "PA / audio", "After-hours monitoring"],
+    whyItMatters:
+      "Gyms and event spaces create unique security challenges because they often serve large groups, outside visitors, and after-hours activities. Better coverage, messaging, and scheduled access help your staff maintain control before, during, and after events.",
+    result: "Large gatherings stay more manageable before, during, and after events.",
+    x: "70%",
+    y: "28%",
+  },
+  parking: {
+    name: "Parking Lot",
+    risk: "Arrival, dismissal, and exterior activity",
+    focus: "Exterior cameras, perimeter awareness, incident verification, and response support",
+    system: ["Outdoor cameras", "Perimeter visibility", "Event search", "Response support"],
+    whyItMatters:
+      "Parking lots are critical during arrival, dismissal, and after-hours activity. Strong exterior coverage and event verification give your team better awareness of what is happening outside the building and better information when a response is needed.",
+    result: "Staff can see what happened outside and react with better information.",
+    x: "78%",
+    y: "72%",
+  },
+};
 
   const demoModes = {
 
@@ -414,50 +424,45 @@ export default function AxisSchoolSecurityBrochure() {
             </div>
 
             <AnimatePresence mode="wait">
-              <motion.div
-                key={selectedZone}
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -24 }}
-                className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl"
-              >
-                <div className="text-xs font-bold uppercase tracking-[0.28em] text-amber-300">Selected Area</div>
-                <h3 className="mt-3 text-4xl font-black">{zone.name}</h3>
-                <p className="mt-4 text-lg font-semibold text-red-300">Risk: {zone.risk}</p>
-                <p className="mt-5 text-lg leading-8 text-zinc-300">{zone.focus}</p>
-<div className="mt-5 rounded-2xl border border-white/10 bg-black/25 p-4">
-  <div className="text-xs font-black uppercase tracking-[0.22em] text-amber-300">
-    Why it matters
-  </div>
+  <motion.div
+    key={selectedZone}
+    initial={{ opacity: 0, y: 24 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -24 }}
+    className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl"
+  >
+    <div className="text-xs font-bold uppercase tracking-[0.28em] text-amber-300">
+      Selected Area
+    </div>
+    <h3 className="mt-3 text-4xl font-black">{zone.name}</h3>
+    <p className="mt-4 text-lg font-semibold text-red-300">Risk: {zone.risk}</p>
+    <p className="mt-5 text-lg leading-8 text-zinc-300">{zone.focus}</p>
 
-  <div className="mt-2 space-y-4 text-sm leading-6 text-zinc-200">
-    <p>
-      Your main entrance is the first—and often most vulnerable—point of access into the building. Without controlled entry, anyone can walk in unnoticed, creating safety, liability, and disruption risks.
-    </p>
+    <div className="mt-5 rounded-2xl border border-white/10 bg-black/25 p-4">
+      <div className="text-xs font-black uppercase tracking-[0.22em] text-amber-300">
+        Why it matters
+      </div>
+      <p className="mt-2 text-sm leading-6 text-zinc-200">
+        {zone.whyItMatters}
+      </p>
+    </div>
 
-    <p>
-      By implementing visitor management, vestibule control, video intercom, and front-door camera coverage, you turn that open access point into a monitored, controlled, and documented entry process. Staff can see and verify who is requesting access before unlocking doors, administrators gain a real-time record of who is in the building, and visitors experience a clear, professional check-in process.
-    </p>
+    <div className="mt-8 flex flex-wrap gap-3">
+      {zone.system.map((item) => (
+        <div
+          key={item}
+          className="rounded-full border border-white/10 bg-black/35 px-4 py-2 text-sm font-bold text-zinc-100"
+        >
+          {item}
+        </div>
+      ))}
+    </div>
 
-    <p>
-      This not only strengthens security—it reduces front office interruptions, eliminates guesswork for staff, and ensures that every person entering the building is accounted for. In a school environment, that translates directly to safer students, more efficient operations, and greater peace of mind for everyone involved.
-    </p>
-  </div>
-</div>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {zone.system.map((item) => (
-                    <div key={item} className="rounded-full border border-white/10 bg-black/35 px-4 py-2 text-sm font-bold text-zinc-100">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-8 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-5">
-                  <div className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300"></div>
-                  <p className="mt-3 text-lg leading-8 text-zinc-100">{zone.result}</p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+    <div className="mt-8 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-5">
+      <p className="text-lg leading-8 text-zinc-100">{zone.result}</p>
+    </div>
+  </motion.div>
+</AnimatePresence>
           </div>
         </div>
       </section>
