@@ -79,7 +79,7 @@ export default function AxisSchoolSecurityBrochure() {
     whyItMatters:
       "The administration office is where visibility and decision-making need to come together fast. A unified dashboard gives administrators one place to monitor events, control doors, review alerts, and coordinate communication without losing time switching between systems.",
     result: "Administrators gain a single place to see events and act fast.",
-    x: "32%",
+    x: "42%",
     y: "68%",
   },
   gym: {
