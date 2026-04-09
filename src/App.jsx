@@ -425,13 +425,24 @@ export default function AxisSchoolSecurityBrochure() {
                 <h3 className="mt-3 text-4xl font-black">{zone.name}</h3>
                 <p className="mt-4 text-lg font-semibold text-red-300">Risk: {zone.risk}</p>
                 <p className="mt-5 text-lg leading-8 text-zinc-300">{zone.focus}</p>
+<div className="mt-5 rounded-2xl border border-white/10 bg-black/25 p-4">
+  <div className="text-xs font-black uppercase tracking-[0.22em] text-amber-300">
+    Why it matters
+  </div>
 
-                <div className="mt-5 rounded-2xl border border-white/10 bg-black/25 p-4">
-                  <div className="text-xs font-black uppercase tracking-[0.22em] text-amber-300">Why it matters</div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-200">
-                    Use this area to connect the technology to a real operational benefit for administrators, staff, and visitors.
-                  </p>
-                </div>
+  <div className="mt-2 space-y-4 text-sm leading-6 text-zinc-200">
+    <p>
+      Your main entrance is the first—and often most vulnerable—point of access into the building. Without controlled entry, anyone can walk in unnoticed, creating safety, liability, and disruption risks.
+    </p>
+
+    <p>
+      By implementing visitor management, vestibule control, video intercom, and front-door camera coverage, you turn that open access point into a monitored, controlled, and documented entry process. Staff can see and verify who is requesting access before unlocking doors, administrators gain a real-time record of who is in the building, and visitors experience a clear, professional check-in process.
+    </p>
+
+    <p>
+      This not only strengthens security—it reduces front office interruptions, eliminates guesswork for staff, and ensures that every person entering the building is accounted for. In a school environment, that translates directly to safer students, more efficient operations, and greater peace of mind for everyone involved.
+    </p>
+  </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   {zone.system.map((item) => (
