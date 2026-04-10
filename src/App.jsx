@@ -334,7 +334,7 @@ export default function AxisSchoolSecurityBrochure() {
                   before it becomes a problem.
                 </h1>
 
-                <p className="mt-4 max-w-3xl text-lg font-medium leading-7 text-[#6b7280] md:text-xl">
+                <p className="mt-6 max-w-3xl text-base font-medium leading-7 text-[#6b7280] md:text-lg">
                   Your school may already have security gaps you cannot see until it is too late.
                 </p>
 
@@ -354,22 +354,22 @@ export default function AxisSchoolSecurityBrochure() {
                   ))}
                 </div>
 
-                <div className="mt-10 flex flex-wrap gap-4">
+                <div className="mt-10 grid w-full max-w-5xl gap-4 md:grid-cols-3">
                   <a
                     href="#simulation"
-                    className="rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-8 py-4 text-base font-black uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
+                    className="flex items-center justify-center rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-8 py-4 text-center text-base font-black uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
                   >
                     Launch Simulation
                   </a>
                   <a
                     href="#map"
-                    className="rounded-xl border border-[#cfcbb6] bg-white px-8 py-4 text-base font-bold uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
+                    className="flex items-center justify-center rounded-xl border border-[#cfcbb6] bg-white px-8 py-4 text-center text-base font-bold uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
                   >
                     Explore Building Map
                   </a>
                   <a
                     href="mailto:nedatainfo@northeastdata.com?subject=School%20Security%20Walkthrough"
-                    className="rounded-xl border border-[#d9c86a] bg-[#fff6cc] px-8 py-4 text-base font-bold uppercase tracking-[0.18em] text-[#534400] shadow-sm transition hover:-translate-y-0.5"
+                    className="flex items-center justify-center rounded-xl border border-[#d9c86a] bg-[#fff6cc] px-8 py-4 text-center text-base font-bold uppercase tracking-[0.18em] text-[#534400] shadow-sm transition hover:-translate-y-0.5"
                   >
                     Book a Walkthrough
                   </a>
