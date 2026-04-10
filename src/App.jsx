@@ -213,22 +213,22 @@ export default function AxisSchoolSecurityBrochure() {
 
   const valuePoints = [
     {
-      title: "Safer entrances",
+      title: "Safer Entrances",
       text: "Verify visitors faster, control access more confidently, and reduce front-door uncertainty.",
       icon: "🚪",
     },
     {
-      title: "Faster response",
+      title: "Faster Response",
       text: "Give staff live visibility and real-time awareness so they can act quickly.",
       icon: "⚡",
     },
     {
-      title: "Better communication",
+      title: "Better Communication",
       text: "Use intercom and audio tools to guide, warn, and inform in real time.",
       icon: "📣",
     },
     {
-      title: "Smarter operations",
+      title: "Smarter Operations",
       text: "Improve visibility, simplify workflows, and support future growth across the campus.",
       icon: "🧠",
     },
@@ -304,143 +304,150 @@ export default function AxisSchoolSecurityBrochure() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]"
+            className="space-y-12"
           >
-            <div>
-              <div className="mb-12 flex items-center gap-5">
-                <img
-                  src="/logo.png"
-                  alt="Northeast Data"
-                  className="h-auto max-h-20 w-auto object-contain md:max-h-24"
-                />
-                <div>
-                  <div className="text-3xl font-black leading-tight tracking-tight text-[#111827] md:text-5xl">
-                    Northeast Data
-                  </div>
-                  <div className="mt-1 text-base font-medium text-[#6b7280] md:text-lg">
-                    Axis-Powered Security Solutions for Schools
-                  </div>
-                </div>
-              </div>
-
-              <div className="inline-flex rounded-full border border-[#d8c96d] bg-[#fff4bf] px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#6b5a00] shadow-sm">
-                Interactive School Security Brochure
-              </div>
-
-              <h1 className="mt-6 max-w-6xl text-2xl font-black leading-[0.92] text-[#111827] md:text-7xl xl:text-8xl">
-                Your school may already have
-                <br />
-                security gaps you cannot
-                <br />
-                see until it is too late.
-              </h1>
-
-              <div className="mt-8 max-w-3xl space-y-3">
-                {[
-                  "See where risk exists across the building.",
-                  "Understand how cameras, doors, intercoms, and audio work together.",
-                  "Give administrators a clearer path to safer entrances, faster response, and better control.",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-3 text-lg leading-8 text-[#4b5563] md:text-xl"
-                  >
-                    <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
-                    <div>{item}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="#simulation"
-                  className="rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-8 py-4 text-base font-black uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
-                >
-                  Launch Simulation
-                </a>
-                <a
-                  href="#map"
-                  className="rounded-xl border border-[#cfcbb6] bg-white px-8 py-4 text-base font-bold uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
-                >
-                  Explore Building Map
-                </a>
-                <a
-                  href="mailto:nedatainfo@northeastdata.com?subject=School%20Security%20Walkthrough"
-                  className="rounded-xl border border-[#d9c86a] bg-[#fff6cc] px-8 py-4 text-base font-bold uppercase tracking-[0.18em] text-[#534400] shadow-sm transition hover:-translate-y-0.5"
-                >
-                  Book a Walkthrough
-                </a>
-              </div>
-
-<div className="mt-12 grid w-full gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-  {valuePoints.map((item) => (
-    <div
-      key={item.title}
-      className="min-w-0 rounded-2xl border border-[#e1dcae] bg-[#fff6c9] p-5 shadow-sm transition hover:-translate-y-0.5"
-    >
-      <div className="mb-3 text-3xl">{item.icon}</div>
-      <div className="text-sm font-black uppercase tracking-[0.16em] text-[#6b5a00] break-words">
-        {item.title}
-      </div>
-      <div className="mt-2 text-sm leading-6 text-[#374151]">{item.text}</div>
-    </div>
-  ))}
-</div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="rounded-[2rem] border border-[#d8d4bf] bg-white p-6 shadow-xl"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div className="text-xs font-black uppercase tracking-[0.26em] text-[#8b7a20]">
-                    What decision-makers will see
-                  </div>
-                  <div className="mt-2 text-2xl font-black text-[#111827]">
-                    A clearer picture of risk, response, and readiness
+            <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <div className="mb-12 flex items-center gap-5">
+                  <img
+                    src="/logo.png"
+                    alt="Northeast Data"
+                    className="h-auto max-h-20 w-auto object-contain md:max-h-24"
+                  />
+                  <div>
+                    <div className="text-3xl font-black leading-tight tracking-tight text-[#111827] md:text-5xl">
+                      Northeast Data
+                    </div>
+                    <div className="mt-1 text-base font-medium text-[#6b7280] md:text-lg">
+                      Axis-Powered Security Solutions for Schools
+                    </div>
                   </div>
                 </div>
-                <div className="rounded-full border border-[#d8c96d] bg-[#fff4bf] px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#6b5a00]">
-                  Live Demo
-                </div>
-              </div>
 
-              <div className="mt-6 grid gap-4">
-                {[
-                  "A guided incident simulation",
-                  "A clickable school security map",
-                  "A cloud-connected operations overview",
-                  "Practical reasons schools buy",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-[#ece7cf] bg-[#faf8ef] p-4 text-base font-semibold text-[#1f2937]"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 rounded-2xl border border-[#e2d799] bg-[#fff8d8] p-5">
-                <div className="text-xs font-black uppercase tracking-[0.2em] text-[#7a6500]">
-                  Why this matters
+                <div className="inline-flex rounded-full border border-[#d8c96d] bg-[#fff4bf] px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#6b5a00] shadow-sm">
+                  Interactive School Security Brochure
                 </div>
-                <div className="mt-3 space-y-2">
+
+                <h1 className="mt-6 max-w-6xl text-4xl font-black leading-[0.95] text-[#111827] md:text-6xl xl:text-7xl">
+                  Know what’s happening in your building—
+                  <br />
+                  before it becomes a problem.
+                </h1>
+
+                <p className="mt-4 max-w-3xl text-lg font-medium leading-7 text-[#6b7280] md:text-xl">
+                  Your school may already have security gaps you cannot see until it is too late.
+                </p>
+
+                <div className="mt-8 max-w-3xl space-y-3">
                   {[
-                    "It shows risk in a way a static brochure cannot.",
-                    "It helps school leaders understand the solution faster.",
-                    "It makes the conversation more visual, practical, and persuasive.",
+                    "See where risk exists across the building.",
+                    "Understand how cameras, doors, intercoms, and audio work together.",
+                    "Give administrators a clearer path to safer entrances, faster response, and better control.",
                   ].map((item) => (
-                    <div key={item} className="flex items-start gap-3 text-sm leading-6 text-[#374151]">
-                      <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#d1af22]" />
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 text-lg leading-8 text-[#4b5563] md:text-xl"
+                    >
+                      <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
                       <div>{item}</div>
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-10 flex flex-wrap gap-4">
+                  <a
+                    href="#simulation"
+                    className="rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-8 py-4 text-base font-black uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
+                  >
+                    Launch Simulation
+                  </a>
+                  <a
+                    href="#map"
+                    className="rounded-xl border border-[#cfcbb6] bg-white px-8 py-4 text-base font-bold uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
+                  >
+                    Explore Building Map
+                  </a>
+                  <a
+                    href="mailto:nedatainfo@northeastdata.com?subject=School%20Security%20Walkthrough"
+                    className="rounded-xl border border-[#d9c86a] bg-[#fff6cc] px-8 py-4 text-base font-bold uppercase tracking-[0.18em] text-[#534400] shadow-sm transition hover:-translate-y-0.5"
+                  >
+                    Book a Walkthrough
+                  </a>
+                </div>
               </div>
-            </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="rounded-[2rem] border border-[#d8d4bf] bg-white p-6 shadow-xl"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="text-xs font-black uppercase tracking-[0.26em] text-[#8b7a20]">
+                      What decision-makers will see
+                    </div>
+                    <div className="mt-2 text-2xl font-black text-[#111827]">
+                      A clearer picture of risk, response, and readiness
+                    </div>
+                  </div>
+                  <div className="rounded-full border border-[#d8c96d] bg-[#fff4bf] px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#6b5a00]">
+                    Live Demo
+                  </div>
+                </div>
+
+                <div className="mt-6 grid gap-4">
+                  {[
+                    "A guided incident simulation",
+                    "A clickable school security map",
+                    "A cloud-connected operations overview",
+                    "Practical reasons schools buy",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-[#ece7cf] bg-[#faf8ef] p-4 text-base font-semibold text-[#1f2937]"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 rounded-2xl border border-[#e2d799] bg-[#fff8d8] p-5">
+                  <div className="text-xs font-black uppercase tracking-[0.2em] text-[#7a6500]">
+                    Why this matters
+                  </div>
+                  <div className="mt-3 space-y-2">
+                    {[
+                      "It shows risk in a way a static brochure cannot.",
+                      "It helps school leaders understand the solution faster.",
+                      "It makes the conversation more visual, practical, and persuasive.",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-start gap-3 text-sm leading-6 text-[#374151]"
+                      >
+                        <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#d1af22]" />
+                        <div>{item}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              {valuePoints.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-[#e1dcae] bg-[#fff6c9] p-5 shadow-sm transition hover:-translate-y-0.5"
+                >
+                  <div className="mb-3 text-3xl">{item.icon}</div>
+                  <div className="text-sm font-black uppercase tracking-[0.08em] text-[#6b5a00]">
+                    {item.title}
+                  </div>
+                  <div className="mt-2 text-sm leading-6 text-[#374151]">{item.text}</div>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
@@ -460,7 +467,10 @@ export default function AxisSchoolSecurityBrochure() {
                 "See how the system detects, verifies, communicates, and responds.",
                 "Understand how staff gain control faster during a live event.",
               ].map((item) => (
-                <div key={item} className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]">
+                <div
+                  key={item}
+                  className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]"
+                >
                   <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
                   <div className="text-left">{item}</div>
                 </div>
@@ -570,7 +580,10 @@ export default function AxisSchoolSecurityBrochure() {
                   </div>
                   <div className="mt-3 space-y-2">
                     {stepMessages[activeStep].map((item) => (
-                      <div key={item} className="flex items-start gap-3 text-base leading-7 text-[#374151]">
+                      <div
+                        key={item}
+                        className="flex items-start gap-3 text-base leading-7 text-[#374151]"
+                      >
                         <div className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#d1af22]" />
                         <div>{item}</div>
                       </div>
@@ -598,7 +611,10 @@ export default function AxisSchoolSecurityBrochure() {
                 "Review recommended technology for that location.",
                 "Understand the practical outcome for staff and administrators.",
               ].map((item) => (
-                <div key={item} className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]">
+                <div
+                  key={item}
+                  className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]"
+                >
                   <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
                   <div className="text-left">{item}</div>
                 </div>
@@ -609,7 +625,6 @@ export default function AxisSchoolSecurityBrochure() {
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="relative min-h-[560px] rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
               <div className="relative h-full min-h-[500px] rounded-[1.5rem] border border-[#ebe6d2] bg-[#f7f6ef]">
-                {/* Main Entrance */}
                 <div className="absolute left-[13%] top-[22%] h-[60%] w-[28%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
                 <div className="absolute left-[16%] top-[26%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
                   Main Entrance
@@ -617,46 +632,39 @@ export default function AxisSchoolSecurityBrochure() {
                 <div className="absolute left-[16%] top-[31%] h-[14%] w-[20%] rounded-xl border border-[#ddd7c0] bg-white" />
                 <div className="absolute left-[16%] top-[48%] h-[20%] w-[20%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                {/* Hallway connector */}
                 <div className="absolute left-[41%] top-[44%] h-[8%] w-[12%] rounded-full border border-[#ddd7c0] bg-[#fff9d8]" />
                 <div className="absolute left-[43%] top-[46.5%] text-[10px] font-black uppercase tracking-[0.18em] text-[#8b7a20]">
                   Hallway
                 </div>
 
-                {/* Main Hallway */}
                 <div className="absolute left-[46%] top-[14%] h-[28%] w-[18%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
                 <div className="absolute left-[48.5%] top-[18%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
                   Main Hallway
                 </div>
                 <div className="absolute left-[49%] top-[24%] h-[10%] w-[12%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                {/* Admin */}
                 <div className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
                 <div className="absolute left-[46%] top-[56%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
                   Admin Office
                 </div>
                 <div className="absolute left-[46%] top-[62%] h-[16%] w-[16%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                {/* Gym */}
                 <div className="absolute left-[70%] top-[16%] h-[28%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
                 <div className="absolute left-[74%] top-[20%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
                   Gym
                 </div>
                 <div className="absolute left-[74%] top-[27%] h-[10%] w-[14%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                {/* Parking */}
                 <div className="absolute left-[69%] top-[63%] h-[20%] w-[26%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
                 <div className="absolute left-[72%] top-[67%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
                   Parking Lot
                 </div>
                 <div className="absolute left-[72%] top-[73%] h-[6%] w-[18%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                {/* Connectors */}
                 <div className="absolute left-[41%] top-[38%] h-[2px] w-[8%] bg-[#d7d0b2]" />
                 <div className="absolute left-[60%] top-[28%] h-[2px] w-[10%] bg-[#d7d0b2]" />
                 <div className="absolute left-[56%] top-[42%] h-[14%] w-[2px] bg-[#d7d0b2]" />
 
-                {/* Markers aligned to boxes */}
                 {Object.entries(buildingZones).map(([key, item]) => (
                   <button
                     key={key}
@@ -731,7 +739,10 @@ export default function AxisSchoolSecurityBrochure() {
                   </div>
                   <div className="mt-3 space-y-2">
                     {zone.whyItMatters.map((item) => (
-                      <div key={item} className="flex items-start gap-3 text-sm leading-6 text-[#374151]">
+                      <div
+                        key={item}
+                        className="flex items-start gap-3 text-sm leading-6 text-[#374151]"
+                      >
                         <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#d1af22]" />
                         <div>{item}</div>
                       </div>
@@ -766,7 +777,10 @@ export default function AxisSchoolSecurityBrochure() {
                 "Support more flexible and scalable management.",
                 "Give schools easier access to systems, events, and tools.",
               ].map((item) => (
-                <div key={item} className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]">
+                <div
+                  key={item}
+                  className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]"
+                >
                   <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
                   <div className="text-left">{item}</div>
                 </div>
@@ -872,7 +886,10 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="mt-2 text-2xl font-black">{value.title}</div>
                   <div className="mt-3 space-y-1">
                     {value.blurb.map((item) => (
-                      <div key={item} className="flex items-start gap-3 text-sm leading-6 opacity-80">
+                      <div
+                        key={item}
+                        className="flex items-start gap-3 text-sm leading-6 opacity-80"
+                      >
                         <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-current" />
                         <div>{item}</div>
                       </div>
@@ -915,7 +932,10 @@ export default function AxisSchoolSecurityBrochure() {
                         "Easier to access",
                         "Better prepared for future growth",
                       ].map((item) => (
-                        <div key={item} className="flex items-start gap-3 text-sm leading-6 text-[#374151]">
+                        <div
+                          key={item}
+                          className="flex items-start gap-3 text-sm leading-6 text-[#374151]"
+                        >
                           <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#d1af22]" />
                           <div>{item}</div>
                         </div>
@@ -944,7 +964,10 @@ export default function AxisSchoolSecurityBrochure() {
                 "Show how it performs during emergencies.",
                 "Show how it helps after hours and during events.",
               ].map((item) => (
-                <div key={item} className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]">
+                <div
+                  key={item}
+                  className="flex items-start justify-center gap-3 text-lg leading-8 text-[#4b5563]"
+                >
                   <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
                   <div className="text-left">{item}</div>
                 </div>
@@ -970,7 +993,10 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="mt-2 text-2xl font-black">{value.title}</div>
                   <div className="mt-3 space-y-1">
                     {value.summary.map((item) => (
-                      <div key={item} className="flex items-start gap-3 text-sm leading-6 opacity-80">
+                      <div
+                        key={item}
+                        className="flex items-start gap-3 text-sm leading-6 opacity-80"
+                      >
                         <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-current" />
                         <div>{item}</div>
                       </div>
@@ -1086,7 +1112,10 @@ export default function AxisSchoolSecurityBrochure() {
                   "They are buying clarity, design guidance, implementation support, and confidence.",
                   "The solution has to match real-world needs, not just a spec sheet.",
                 ].map((item) => (
-                  <div key={item} className="flex items-start gap-3 text-lg leading-8 text-[#4b5563]">
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 text-lg leading-8 text-[#4b5563]"
+                  >
                     <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
                     <div>{item}</div>
                   </div>
@@ -1128,7 +1157,10 @@ export default function AxisSchoolSecurityBrochure() {
               "See how staff can respond faster and with more confidence.",
               "Walk away with a clearer plan tailored to the school.",
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 text-lg leading-8 text-[#4b5563]">
+              <div
+                key={item}
+                className="flex items-start gap-3 text-lg leading-8 text-[#4b5563]"
+              >
                 <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d1af22]" />
                 <div>{item}</div>
               </div>
