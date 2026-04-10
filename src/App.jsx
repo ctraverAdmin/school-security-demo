@@ -96,7 +96,7 @@ export default function AxisSchoolSecurityBrochure() {
         "Guide students more effectively during disruptions.",
       ],
       result: "Teams can monitor movement, investigate issues, and guide students more quickly.",
-      marker: { left: "55%", top: "29%" },
+      marker: { left: "55%", top: "34%" },
     },
     admin: {
       name: "Administration Office",
@@ -130,7 +130,7 @@ export default function AxisSchoolSecurityBrochure() {
         "Strengthen oversight before, during, and after events.",
       ],
       result: "Large gatherings become more manageable before, during, and after events.",
-      marker: { left: "81%", top: "30%" },
+      marker: { left: "82%", top: "34%" },
     },
     parking: {
       name: "Parking Lot",
@@ -147,7 +147,7 @@ export default function AxisSchoolSecurityBrochure() {
         "Support investigations with better exterior context.",
       ],
       result: "Staff gain better awareness of exterior activity and respond with better information.",
-      marker: { left: "81%", top: "73%" },
+      marker: { left: "82%", top: "70%" },
     },
   };
 
@@ -626,22 +626,18 @@ export default function AxisSchoolSecurityBrochure() {
             <div className="relative min-h-[560px] rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
               <div className="relative h-full min-h-[500px] rounded-[1.5rem] border border-[#ebe6d2] bg-[#f7f6ef]">
                 <div className="absolute left-[13%] top-[22%] h-[60%] w-[28%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-                <div className="absolute left-[16%] top-[26%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
-                  Main Entrance
-                </div>
-                <div className="absolute left-[16%] top-[31%] h-[14%] w-[20%] rounded-xl border border-[#ddd7c0] bg-white" />
-                <div className="absolute left-[16%] top-[48%] h-[20%] w-[20%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[41%] top-[44%] h-[8%] w-[12%] rounded-full border border-[#ddd7c0] bg-[#fff9d8]" />
-                <div className="absolute left-[43%] top-[46.5%] text-[10px] font-black uppercase tracking-[0.18em] text-[#8b7a20]">
-                  Hallway
-                </div>
+<div className="absolute left-[13%] top-[26%] w-[28%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
+  Main Entrance
+</div>
+               
+                <div className="absolute left-[17%] top-[30%] h-[45%] w-[20%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[46%] top-[14%] h-[28%] w-[18%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-                <div className="absolute left-[48.5%] top-[18%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
-                  Main Hallway
-                </div>
-                <div className="absolute left-[49%] top-[24%] h-[10%] w-[12%] rounded-xl border border-[#ddd7c0] bg-white" />
+                <div className="absolute left-[43%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
+                <div className="absolute left-[43%] top-[18%] w-[24%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
+  Main Hallway
+</div>
+                <div className="absolute left-[49%] top-[24%] h-[20%] w-[12%] rounded-xl border border-[#ddd7c0] bg-white" />
 
                 <div className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
                 <div className="absolute left-[46%] top-[56%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
@@ -649,21 +645,19 @@ export default function AxisSchoolSecurityBrochure() {
                 </div>
                 <div className="absolute left-[46%] top-[62%] h-[16%] w-[16%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[70%] top-[16%] h-[28%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-                <div className="absolute left-[74%] top-[20%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
-                  Gym
-                </div>
-                <div className="absolute left-[74%] top-[27%] h-[10%] w-[14%] rounded-xl border border-[#ddd7c0] bg-white" />
+                <div className="absolute left-[70%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
+<div className="absolute left-[70%] top-[19%] w-[24%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200] z-10">
+  Gym
+</div>
+                <div className="absolute left-[75%] top-[24%] h-[20%] w-[14%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[69%] top-[63%] h-[20%] w-[26%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-                <div className="absolute left-[72%] top-[67%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
-                  Parking Lot
-                </div>
-                <div className="absolute left-[72%] top-[73%] h-[6%] w-[18%] rounded-xl border border-[#ddd7c0] bg-white" />
+                <div className="absolute left-[69%] top-[52%] h-[34%] w-[26%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
+<div className="absolute left-[69%] top-[56%] w-[26%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200] z-10">
+  Parking Lot
+</div>
+                <div className="absolute left-[73%] top-[63%] h-[16%] w-[18%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[41%] top-[38%] h-[2px] w-[8%] bg-[#d7d0b2]" />
-                <div className="absolute left-[60%] top-[28%] h-[2px] w-[10%] bg-[#d7d0b2]" />
-                <div className="absolute left-[56%] top-[42%] h-[14%] w-[2px] bg-[#d7d0b2]" />
+              
 
                 {Object.entries(buildingZones).map(([key, item]) => (
                   <button
