@@ -328,14 +328,17 @@ export default function AxisSchoolSecurityBrochure() {
                   Interactive School Security Brochure
                 </div>
 
-                <h1 className="mt-6 max-w-6xl text-4xl font-black leading-[0.95] text-[#111827] md:text-6xl xl:text-7xl">
-                  Know what’s happening in your building—
+                <h1 className="mt-6 max-w-5xl text-3xl font-black leading-[1] text-[#111827] md:text-5xl xl:text-6xl">
+                  See risk sooner.
                   <br />
-                  before it becomes a problem.
+                  Respond faster.
+                  <br />
+                  Protect your school with more control.
                 </h1>
 
                 <p className="mt-6 max-w-3xl text-base font-medium leading-7 text-[#6b7280] md:text-lg">
-                  Your school may already have security gaps you cannot see until it is too late.
+                  Real-time situational awareness starts when cameras, access control,
+                  intercom, and audio systems work together as one connected platform.
                 </p>
 
                 <div className="mt-8 max-w-3xl space-y-3">
@@ -354,25 +357,52 @@ export default function AxisSchoolSecurityBrochure() {
                   ))}
                 </div>
 
-                <div className="mt-10 grid w-full max-w-5xl gap-4 md:grid-cols-3">
-                  <a
-                    href="#simulation"
-                    className="flex items-center justify-center rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-8 py-4 text-center text-base font-black uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
-                  >
-                    Launch Simulation
-                  </a>
-                  <a
-                    href="#map"
-                    className="flex items-center justify-center rounded-xl border border-[#cfcbb6] bg-white px-8 py-4 text-center text-base font-bold uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
-                  >
-                    Explore Building Map
-                  </a>
-                  <a
-                    href="mailto:nedatainfo@northeastdata.com?subject=School%20Security%20Walkthrough"
-                    className="flex items-center justify-center rounded-xl border border-[#d9c86a] bg-[#fff6cc] px-8 py-4 text-center text-base font-bold uppercase tracking-[0.18em] text-[#534400] shadow-sm transition hover:-translate-y-0.5"
-                  >
-                    Book a Walkthrough
-                  </a>
+                <div className="mt-10 max-w-4xl">
+                  <div className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7a20]">
+                    What schools are dealing with every day
+                  </div>
+
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {[
+                      "Unverified visitors entering the building",
+                      "Incidents happening without real-time visibility",
+                      "Delays in communication during emergencies",
+                      "Disconnected systems slowing response",
+                      "Limited visibility across hallways and shared spaces",
+                      "Challenges managing after-hours activity and events",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-start gap-3 rounded-xl border border-[#e5dfc7] bg-[#fff9de] px-4 py-3 text-sm font-semibold text-[#374151]"
+                      >
+                        <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#d1af22]" />
+                        <div>{item}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-10 flex w-full justify-center">
+                  <div className="grid w-full max-w-5xl gap-4 md:grid-cols-3">
+                    <a
+                      href="#simulation"
+                      className="flex items-center justify-center rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-8 py-4 text-center text-base font-black uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
+                    >
+                      Launch Simulation
+                    </a>
+                    <a
+                      href="#map"
+                      className="flex items-center justify-center rounded-xl border border-[#cfcbb6] bg-white px-8 py-4 text-center text-base font-bold uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
+                    >
+                      Explore Building Map
+                    </a>
+                    <a
+                      href="mailto:nedatainfo@northeastdata.com?subject=School%20Security%20Walkthrough"
+                      className="flex items-center justify-center rounded-xl border border-[#d9c86a] bg-[#fff6cc] px-8 py-4 text-center text-base font-bold uppercase tracking-[0.18em] text-[#534400] shadow-sm transition hover:-translate-y-0.5"
+                    >
+                      Book a Walkthrough
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -436,16 +466,17 @@ export default function AxisSchoolSecurityBrochure() {
 
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {valuePoints.map((item) => (
-                <div
+                <motion.div
                   key={item.title}
-                  className="rounded-2xl border border-[#e1dcae] bg-[#fff6c9] p-5 shadow-sm transition hover:-translate-y-0.5"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  className="rounded-2xl border border-[#e1dcae] bg-[#fff6c9] p-5 shadow-sm"
                 >
                   <div className="mb-3 text-3xl">{item.icon}</div>
                   <div className="text-sm font-black uppercase tracking-[0.08em] text-[#6b5a00]">
                     {item.title}
                   </div>
                   <div className="mt-2 text-sm leading-6 text-[#374151]">{item.text}</div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -625,39 +656,80 @@ export default function AxisSchoolSecurityBrochure() {
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="relative min-h-[560px] rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
               <div className="relative h-full min-h-[500px] rounded-[1.5rem] border border-[#ebe6d2] bg-[#f7f6ef]">
-                <div className="absolute left-[13%] top-[22%] h-[60%] w-[28%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
+                <motion.div
+                  whileHover={{ scale: 1.015 }}
+                  className="absolute left-[13%] top-[22%] h-[60%] w-[28%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                />
 
-<div className="absolute left-[13%] top-[26%] w-[28%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
-  Main Entrance
-</div>
-               
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute left-[13%] top-[26%] z-10 w-[28%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]"
+                >
+                  Main Entrance
+                </motion.div>
+
                 <div className="absolute left-[17%] top-[30%] h-[45%] w-[20%] rounded-xl border border-[#ddd7c0] bg-white" />
+                <div className="absolute left-[22%] top-[36%] h-[4%] w-[12%] rounded-md border border-[#c7be98] bg-[#e8ddb6]" />
+                <div className="absolute left-[20.5%] top-[40.5%] h-[2.2%] w-[8%] rounded-md border border-[#c7be98] bg-[#e8ddb6]" />
+                <div className="absolute left-[24.5%] top-[42.2%] h-[1.6%] w-[1.6%] rounded-full border border-[#a99658] bg-[#c7b06a]" />
 
-                <div className="absolute left-[43%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-                <div className="absolute left-[43%] top-[18%] w-[24%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
-  Main Hallway
-</div>
+                <motion.div
+                  whileHover={{ scale: 1.015 }}
+                  className="absolute left-[43%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                />
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45 }}
+                  className="absolute left-[43%] top-[18%] z-10 w-[24%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]"
+                >
+                  Main Hallway
+                </motion.div>
                 <div className="absolute left-[49%] top-[24%] h-[20%] w-[12%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-                <div className="absolute left-[46%] top-[56%] text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]">
+                <motion.div
+                  whileHover={{ scale: 1.015 }}
+                  className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                />
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute left-[43%] top-[56%] z-10 w-[24%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]"
+                >
                   Admin Office
-                </div>
+                </motion.div>
                 <div className="absolute left-[46%] top-[62%] h-[16%] w-[16%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[70%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-<div className="absolute left-[70%] top-[19%] w-[24%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200] z-10">
-  Gym
-</div>
+                <motion.div
+                  whileHover={{ scale: 1.015 }}
+                  className="absolute left-[70%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                />
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55 }}
+                  className="absolute left-[70%] top-[19%] z-10 w-[24%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]"
+                >
+                  Gym
+                </motion.div>
                 <div className="absolute left-[75%] top-[24%] h-[20%] w-[14%] rounded-xl border border-[#ddd7c0] bg-white" />
 
-                <div className="absolute left-[69%] top-[52%] h-[34%] w-[26%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]" />
-<div className="absolute left-[69%] top-[56%] w-[26%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200] z-10">
-  Parking Lot
-</div>
+                <motion.div
+                  whileHover={{ scale: 1.015 }}
+                  className="absolute left-[69%] top-[52%] h-[34%] w-[26%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                />
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="absolute left-[69%] top-[56%] z-10 w-[26%] text-center text-[11px] font-black uppercase tracking-[0.18em] text-[#756200]"
+                >
+                  Parking Lot
+                </motion.div>
                 <div className="absolute left-[73%] top-[63%] h-[16%] w-[18%] rounded-xl border border-[#ddd7c0] bg-white" />
-
-              
 
                 {Object.entries(buildingZones).map(([key, item]) => (
                   <button
@@ -679,10 +751,10 @@ export default function AxisSchoolSecurityBrochure() {
                           selectedZone === key ? "bg-[#1f2937]" : "bg-[#d1af22]"
                         }`}
                       />
-                      <div
-                        className={`absolute h-12 w-12 rounded-full ${
-                          selectedZone === key ? "animate-ping bg-[#f3d44a]/30" : "bg-transparent"
-                        }`}
+                      <motion.div
+                        className="absolute h-12 w-12 rounded-full bg-[#f3d44a]/30"
+                        animate={{ scale: [1, 1.4, 1], opacity: [0.4, 0.15, 0.4] }}
+                        transition={{ repeat: Infinity, duration: 2 }}
                       />
                     </div>
                   </button>
