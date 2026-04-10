@@ -327,7 +327,7 @@ export default function AxisSchoolSecurityBrochure() {
                 Interactive School Security Brochure
               </div>
 
-              <h1 className="mt-6 max-w-6xl text-5xl font-black leading-[0.92] text-[#111827] md:text-7xl xl:text-8xl">
+              <h1 className="mt-6 max-w-6xl text-2xl font-black leading-[0.92] text-[#111827] md:text-7xl xl:text-8xl">
                 Your school may already have
                 <br />
                 security gaps you cannot
@@ -372,20 +372,20 @@ export default function AxisSchoolSecurityBrochure() {
                 </a>
               </div>
 
-              <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                {valuePoints.map((item) => (
-                  <div
-                    key={item.title}
-                    className="rounded-2xl border border-[#e1dcae] bg-[#fff6c9] p-5 shadow-sm transition hover:-translate-y-0.5"
-                  >
-                    <div className="mb-3 text-3xl">{item.icon}</div>
-                    <div className="text-sm font-black uppercase tracking-[0.16em] text-[#6b5a00]">
-                      {item.title}
-                    </div>
-                    <div className="mt-2 text-sm leading-6 text-[#374151]">{item.text}</div>
-                  </div>
-                ))}
-              </div>
+<div className="mt-12 grid w-full gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+  {valuePoints.map((item) => (
+    <div
+      key={item.title}
+      className="min-w-0 rounded-2xl border border-[#e1dcae] bg-[#fff6c9] p-5 shadow-sm transition hover:-translate-y-0.5"
+    >
+      <div className="mb-3 text-3xl">{item.icon}</div>
+      <div className="text-sm font-black uppercase tracking-[0.16em] text-[#6b5a00] break-words">
+        {item.title}
+      </div>
+      <div className="mt-2 text-sm leading-6 text-[#374151]">{item.text}</div>
+    </div>
+  ))}
+</div>
             </div>
 
             <motion.div
