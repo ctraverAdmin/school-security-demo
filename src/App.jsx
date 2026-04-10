@@ -40,26 +40,31 @@ export default function AxisSchoolSecurityBrochure() {
       title: "Door Event Detected",
       desc: "A door is opened at the main entrance and the event is immediately registered.",
       system: "Access Control",
+      image: "/images/ai-hero-entrance.png",
     },
     {
       title: "Video Verification Begins",
       desc: "The nearest camera provides live visual context so staff can verify activity quickly.",
       system: "Video Surveillance",
+      image: "/images/ai-monitoring-room.png",
     },
     {
       title: "Staff Are Alerted",
       desc: "Relevant staff receive the event with live awareness and critical details.",
       system: "Real-Time Notification",
+      image: "/images/communication.png",
     },
     {
       title: "Communication Starts",
       desc: "Intercom and audio tools allow staff to speak, guide, or warn in the affected area.",
       system: "Intercom / Network Audio",
+      image: "/images/communicationstart.png",
     },
     {
       title: "Response Is Managed",
       desc: "Staff coordinate from one system to assess, communicate, and respond with more control.",
       system: "Unified Security Response",
+      image: "/images/response.png",
     },
   ];
 
@@ -78,7 +83,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Allow staff to see and speak before unlocking.",
         "Create a more controlled and documented entry process.",
       ],
-      result: "Front office staff can verify, communicate, and unlock only when appropriate.",
+      result:
+        "Front office staff can verify, communicate, and unlock only when appropriate.",
       marker: { left: "26%", top: "50%" },
     },
     hallway: {
@@ -95,7 +101,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Support faster review of incidents and behavior.",
         "Guide students more effectively during disruptions.",
       ],
-      result: "Teams can monitor movement, investigate issues, and guide students more quickly.",
+      result:
+        "Teams can monitor movement, investigate issues, and guide students more quickly.",
       marker: { left: "55%", top: "34%" },
     },
     admin: {
@@ -112,7 +119,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Help administrators react without switching between systems.",
         "Support faster decisions when time matters.",
       ],
-      result: "Administrators gain a single location to see events and act fast.",
+      result:
+        "Administrators gain a single location to see events and act fast.",
       marker: { left: "54%", top: "70%" },
     },
     gym: {
@@ -129,7 +137,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Support after-hours events and visitors.",
         "Strengthen oversight before, during, and after events.",
       ],
-      result: "Large gatherings become more manageable before, during, and after events.",
+      result:
+        "Large gatherings become more manageable before, during, and after events.",
       marker: { left: "82%", top: "34%" },
     },
     parking: {
@@ -146,7 +155,8 @@ export default function AxisSchoolSecurityBrochure() {
         "Review arrival and dismissal activity more clearly.",
         "Support investigations with better exterior context.",
       ],
-      result: "Staff gain better awareness of exterior activity and respond with better information.",
+      result:
+        "Staff gain better awareness of exterior activity and respond with better information.",
       marker: { left: "82%", top: "70%" },
     },
   };
@@ -288,7 +298,7 @@ export default function AxisSchoolSecurityBrochure() {
   const demo = demoModes[demoMode];
   const progress = useMemo(
     () => ((activeStep + 1) / steps.length) * 100,
-    [activeStep, steps.length],
+    [activeStep, steps.length]
   );
 
   return (
@@ -337,8 +347,9 @@ export default function AxisSchoolSecurityBrochure() {
                 </h1>
 
                 <p className="mt-6 max-w-3xl text-base font-medium leading-7 text-[#6b7280] md:text-lg">
-                  Real-time situational awareness starts when cameras, access control,
-                  intercom, and audio systems work together as one connected platform.
+                  Real-time situational awareness starts when cameras, access
+                  control, intercom, and audio systems work together as one
+                  connected platform.
                 </p>
 
                 <div className="mt-8 max-w-3xl space-y-3">
@@ -421,9 +432,15 @@ export default function AxisSchoolSecurityBrochure() {
                     </div>
                   </div>
                   <div className="rounded-full border border-[#d8c96d] bg-[#fff4bf] px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#6b5a00]">
-                    Live Demo
+                    
                   </div>
                 </div>
+
+                <img
+                  src="/images/set.png"
+                  alt="AI-generated school security visuals"
+                  className="mt-6 w-full rounded-2xl border border-[#ece7cf] object-cover shadow-sm"
+                />
 
                 <div className="mt-6 grid gap-4">
                   {[
@@ -475,7 +492,9 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="text-sm font-black uppercase tracking-[0.08em] text-[#6b5a00]">
                     {item.title}
                   </div>
-                  <div className="mt-2 text-sm leading-6 text-[#374151]">{item.text}</div>
+                  <div className="mt-2 text-sm leading-6 text-[#374151]">
+                    {item.text}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -531,7 +550,9 @@ export default function AxisSchoolSecurityBrochure() {
                   animate={{ width: `${progress}%` }}
                 />
               </div>
-
+<div className="mb-4 text-center text-sm font-bold text-amber-600 animate-pulse">
+  👇 Click a step below to walk through the incident
+</div>
               <div className="space-y-3">
                 {steps.map((step, i) => (
                   <button
@@ -553,11 +574,15 @@ export default function AxisSchoolSecurityBrochure() {
                       {i + 1}
                     </div>
                     <div>
-                      <div className="text-xs font-black uppercase tracking-[0.2em] opacity-70">
+                      <div className="text-lg md:text-xl font-extrabold uppercase tracking-[0.25em] text-amber-600">
                         Step {i + 1}
                       </div>
-                      <div className="mt-1 text-lg font-black">{step.title}</div>
-                      <div className="mt-1 text-sm opacity-80">{step.system}</div>
+                      <div className="mt-1 text-lg font-black">
+                        {step.title}
+                      </div>
+                      <div className="mt-1 text-sm opacity-80">
+                        {step.system}
+                      </div>
                     </div>
                   </button>
                 ))}
@@ -589,6 +614,15 @@ export default function AxisSchoolSecurityBrochure() {
                 <p className="mt-6 max-w-2xl text-xl leading-8 text-[#4b5563]">
                   {steps[activeStep].desc}
                 </p>
+
+                <div className="relative mt-6 overflow-hidden rounded-2xl border border-[#ece7d2]">
+                  <img
+                    src={steps[activeStep].image}
+                    alt={steps[activeStep].title}
+                    className="h-64 w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
 
                 <div className="mt-10 grid gap-4 md:grid-cols-3">
                   {[
@@ -627,7 +661,10 @@ export default function AxisSchoolSecurityBrochure() {
         </div>
       </section>
 
-      <section id="map" className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
+      <section
+        id="map"
+        className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <div className="text-xs font-black uppercase tracking-[0.3em] text-[#8b7a20]">
@@ -655,12 +692,18 @@ export default function AxisSchoolSecurityBrochure() {
 
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="relative min-h-[560px] rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
-              <div className="relative h-full min-h-[500px] rounded-[1.5rem] border border-[#ebe6d2] bg-[#f7f6ef]">
+              <div
+                className="relative h-full min-h-[500px] rounded-[1.5rem] border border-[#ebe6d2] bg-[#f4f3ec]"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(#ece8d7 1px, transparent 1px), linear-gradient(90deg, #ece8d7 1px, transparent 1px)",
+                  backgroundSize: "40px 40px",
+                }}
+              >
                 <motion.div
                   whileHover={{ scale: 1.015 }}
-                  className="absolute left-[13%] top-[22%] h-[60%] w-[28%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                  className="absolute left-[13%] top-[22%] h-[60%] w-[28%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff8cc] shadow-[0_4px_10px_rgba(0,0,0,0.05)]"
                 />
-
                 <motion.div
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -671,13 +714,14 @@ export default function AxisSchoolSecurityBrochure() {
                 </motion.div>
 
                 <div className="absolute left-[17%] top-[30%] h-[45%] w-[20%] rounded-xl border border-[#ddd7c0] bg-white" />
-                <div className="absolute left-[22%] top-[36%] h-[4%] w-[12%] rounded-md border border-[#c7be98] bg-[#e8ddb6]" />
+                <div className="absolute left-[15%] top-[28%] h-[6%] w-[2%] rounded-sm bg-[#d6cfb2]" />
+                <div className="absolute left-[22%] top-[36%] h-[4%] w-[12%] rounded-md border border-[#c7be98] bg-[#e8ddb6] shadow-sm" />
                 <div className="absolute left-[20.5%] top-[40.5%] h-[2.2%] w-[8%] rounded-md border border-[#c7be98] bg-[#e8ddb6]" />
                 <div className="absolute left-[24.5%] top-[42.2%] h-[1.6%] w-[1.6%] rounded-full border border-[#a99658] bg-[#c7b06a]" />
 
                 <motion.div
                   whileHover={{ scale: 1.015 }}
-                  className="absolute left-[43%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                  className="absolute left-[43%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff8cc] shadow-[0_4px_10px_rgba(0,0,0,0.05)]"
                 />
                 <motion.div
                   initial={{ opacity: 0, y: 5 }}
@@ -691,7 +735,7 @@ export default function AxisSchoolSecurityBrochure() {
 
                 <motion.div
                   whileHover={{ scale: 1.015 }}
-                  className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                  className="absolute left-[43%] top-[52%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff8cc] shadow-[0_4px_10px_rgba(0,0,0,0.05)]"
                 />
                 <motion.div
                   initial={{ opacity: 0, y: 5 }}
@@ -705,7 +749,7 @@ export default function AxisSchoolSecurityBrochure() {
 
                 <motion.div
                   whileHover={{ scale: 1.015 }}
-                  className="absolute left-[70%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                  className="absolute left-[70%] top-[14%] h-[34%] w-[24%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff8cc] shadow-[0_4px_10px_rgba(0,0,0,0.05)]"
                 />
                 <motion.div
                   initial={{ opacity: 0, y: 5 }}
@@ -719,7 +763,7 @@ export default function AxisSchoolSecurityBrochure() {
 
                 <motion.div
                   whileHover={{ scale: 1.015 }}
-                  className="absolute left-[69%] top-[52%] h-[34%] w-[26%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff9d8]"
+                  className="absolute left-[69%] top-[52%] h-[34%] w-[26%] rounded-[1.5rem] border border-[#d9d4bc] bg-[#fff8cc] shadow-[0_4px_10px_rgba(0,0,0,0.05)]"
                 />
                 <motion.div
                   initial={{ opacity: 0, y: 5 }}
@@ -748,12 +792,17 @@ export default function AxisSchoolSecurityBrochure() {
                     >
                       <div
                         className={`h-2.5 w-2.5 rounded-full ${
-                          selectedZone === key ? "bg-[#1f2937]" : "bg-[#d1af22]"
+                          selectedZone === key
+                            ? "bg-[#1f2937]"
+                            : "bg-[#d1af22]"
                         }`}
                       />
                       <motion.div
                         className="absolute h-12 w-12 rounded-full bg-[#f3d44a]/30"
-                        animate={{ scale: [1, 1.4, 1], opacity: [0.4, 0.15, 0.4] }}
+                        animate={{
+                          scale: [1, 1.4, 1],
+                          opacity: [0.4, 0.15, 0.4],
+                        }}
                         transition={{ repeat: Infinity, duration: 2 }}
                       />
                     </div>
@@ -777,7 +826,9 @@ export default function AxisSchoolSecurityBrochure() {
                 <div className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7a20]">
                   Selected Area
                 </div>
-                <h3 className="mt-3 text-4xl font-black text-[#111827]">{zone.name}</h3>
+                <h3 className="mt-3 text-4xl font-black text-[#111827]">
+                  {zone.name}
+                </h3>
 
                 <div className="mt-4 inline-flex rounded-full border border-[#eedf93] bg-[#fff6c9] px-4 py-2 text-sm font-bold text-[#6b5a00]">
                   Risk: {zone.risk}
@@ -820,7 +871,9 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
                     Outcome
                   </div>
-                  <p className="mt-2 text-lg leading-8 text-[#374151]">{zone.result}</p>
+                  <p className="mt-2 text-lg leading-8 text-[#374151]">
+                    {zone.result}
+                  </p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -870,64 +923,99 @@ export default function AxisSchoolSecurityBrochure() {
                 </div>
               </div>
 
-              <div className="relative min-h-[540px] rounded-[1.6rem] border border-[#ece7d2] bg-[#faf8ef] p-6">
-                <div className="grid h-full min-h-[500px] gap-6 lg:grid-cols-[1fr_auto_1fr]">
-                  <div className="rounded-2xl border border-[#e5dfc7] bg-white p-4">
-                    <div className="text-sm font-black uppercase tracking-[0.2em] text-[#8b7a20]">
-                      At the School
-                    </div>
-                    <div className="mt-3 grid gap-3 text-sm text-[#374151]">
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Axis cameras</div>
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Door controllers</div>
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Intercoms</div>
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Network audio</div>
-                    </div>
-                  </div>
+              <div className="overflow-hidden rounded-[1.6rem] border border-[#ece7d2] bg-[#faf8ef]">
+                <img
+                  src="/images/ai-cloud-network.png"
+                  alt="AI-generated connected systems and cloud visual"
+                  className="h-72 w-full object-cover"
+                />
 
-                  <div className="hidden items-center justify-center lg:flex">
-                    <div className="text-3xl font-black text-[#b79a1d]">→</div>
-                  </div>
-
-                  <div className="rounded-2xl border border-[#e5dfc7] bg-white p-4">
-                    <div className="text-sm font-black uppercase tracking-[0.2em] text-[#8b7a20]">
-                      People &amp; Apps
-                    </div>
-                    <div className="mt-3 grid gap-3 text-sm text-[#374151]">
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Admins in browser</div>
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Security operators</div>
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Partner software</div>
-                      <div className="rounded-xl bg-[#fff9de] px-3 py-3">Remote investigators</div>
-                    </div>
-                  </div>
-
-                  <div className="lg:col-span-3">
-                    <div className="mx-auto max-w-md rounded-2xl border border-[#e3d99b] bg-[#fff8d8] p-5 text-center shadow-sm">
-                      <div className="text-sm font-black uppercase tracking-[0.2em] text-[#7a6500]">
-                        Cloud Layer
-                      </div>
-                      <div className="mt-3 text-3xl font-black text-[#111827]">
-                        Axis Cloud Connect
-                      </div>
-                      <div className="mt-3 text-sm leading-7 text-[#4b5563]">
-                        Managed services, remote connectivity, lifecycle workflows, and secure access.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-center lg:col-span-3">
-                    <div className="hidden text-3xl font-black text-[#b79a1d] lg:block">↓</div>
-                  </div>
-
-                  <div className="lg:col-span-3">
+                <div className="p-6">
+                  <div className="grid gap-6 lg:grid-cols-[1fr_auto_1fr]">
                     <div className="rounded-2xl border border-[#e5dfc7] bg-white p-4">
                       <div className="text-sm font-black uppercase tracking-[0.2em] text-[#8b7a20]">
-                        Outcomes
+                        At the School
                       </div>
-                      <div className="mt-3 grid gap-3 text-sm text-[#374151] sm:grid-cols-2">
-                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">Anywhere access</div>
-                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">Simplified onboarding</div>
-                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">Proactive updates</div>
-                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">Scalable multi-site management</div>
+                      <div className="mt-3 grid gap-3 text-sm text-[#374151]">
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Axis cameras
+                        </div>
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Door controllers
+                        </div>
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Intercoms
+                        </div>
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Network audio
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="hidden items-center justify-center lg:flex">
+                      <div className="text-3xl font-black text-[#b79a1d]">→</div>
+                    </div>
+
+                    <div className="rounded-2xl border border-[#e5dfc7] bg-white p-4">
+                      <div className="text-sm font-black uppercase tracking-[0.2em] text-[#8b7a20]">
+                        People &amp; Apps
+                      </div>
+                      <div className="mt-3 grid gap-3 text-sm text-[#374151]">
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Admins in browser
+                        </div>
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Security operators
+                        </div>
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Partner software
+                        </div>
+                        <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                          Remote investigators
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="lg:col-span-3">
+                      <div className="mx-auto max-w-md rounded-2xl border border-[#e3d99b] bg-[#fff8d8] p-5 text-center shadow-sm">
+                        <div className="text-sm font-black uppercase tracking-[0.2em] text-[#7a6500]">
+                          Cloud Layer
+                        </div>
+                        <div className="mt-3 text-3xl font-black text-[#111827]">
+                          Axis Cloud Connect
+                        </div>
+                        <div className="mt-3 text-sm leading-7 text-[#4b5563]">
+                          Managed services, remote connectivity, lifecycle
+                          workflows, and secure access.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-center lg:col-span-3">
+                      <div className="hidden text-3xl font-black text-[#b79a1d] lg:block">
+                        ↓
+                      </div>
+                    </div>
+
+                    <div className="lg:col-span-3">
+                      <div className="rounded-2xl border border-[#e5dfc7] bg-white p-4">
+                        <div className="text-sm font-black uppercase tracking-[0.2em] text-[#8b7a20]">
+                          Outcomes
+                        </div>
+                        <div className="mt-3 grid gap-3 text-sm text-[#374151] sm:grid-cols-2">
+                          <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                            Anywhere access
+                          </div>
+                          <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                            Simplified onboarding
+                          </div>
+                          <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                            Proactive updates
+                          </div>
+                          <div className="rounded-xl bg-[#fff9de] px-3 py-3">
+                            Scalable multi-site management
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -975,7 +1063,9 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7a20]">
                     What this gives you
                   </div>
-                  <h3 className="mt-3 text-3xl font-black text-[#111827]">{cloud.title}</h3>
+                  <h3 className="mt-3 text-3xl font-black text-[#111827]">
+                    {cloud.title}
+                  </h3>
 
                   <div className="mt-6 grid gap-3">
                     {cloud.bullets.map((item) => (
@@ -1085,11 +1175,21 @@ export default function AxisSchoolSecurityBrochure() {
                     <div className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7a20]">
                       Current Demo
                     </div>
-                    <h3 className="mt-3 text-4xl font-black text-[#111827]">{demo.title}</h3>
+                    <h3 className="mt-3 text-4xl font-black text-[#111827]">
+                      {demo.title}
+                    </h3>
                   </div>
                   <div className="rounded-full border border-[#e5d98b] bg-[#fff6c9] px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#6b5a00]">
                     Client-Facing Tool
                   </div>
+                </div>
+
+                <div className="mt-6 overflow-hidden rounded-2xl border border-[#ece7d2]">
+                  <img
+                    src="/images/ai-school-set.png"
+                    alt="AI-generated school environment visual"
+                    className="h-56 w-full object-cover"
+                  />
                 </div>
 
                 <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -1115,7 +1215,7 @@ export default function AxisSchoolSecurityBrochure() {
                     ))}
                   </div>
                   <div className="text-xs font-black uppercase tracking-[0.24em] text-[#8b7a20]">
-                    Suggested Talk Track
+                    Talk Track
                   </div>
                   <div className="mt-4 grid gap-3">
                     {demo.timeline.map((item, i) => (
@@ -1126,7 +1226,9 @@ export default function AxisSchoolSecurityBrochure() {
                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f3d44a] text-sm font-black text-[#1f2937]">
                           {i + 1}
                         </div>
-                        <div className="text-sm font-semibold text-[#374151]">{item}</div>
+                        <div className="text-sm font-semibold text-[#374151]">
+                          {item}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -1145,7 +1247,8 @@ export default function AxisSchoolSecurityBrochure() {
                 Why Schools Buy
               </div>
               <h2 className="mt-3 text-3xl font-black text-[#111827] md:text-5xl">
-                A better security story for administrators, operations teams, and decision-makers
+                A better security story for administrators, operations teams,
+                and decision-makers
               </h2>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
