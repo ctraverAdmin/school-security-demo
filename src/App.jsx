@@ -371,11 +371,11 @@ export default function AxisSchoolSecurityBrochure() {
       <div className="pointer-events-none fixed left-0 top-0 z-0 h-full w-4 bg-[#b32025]" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center opacity-[0.09]">
-        <img
-          src="/logo.png"
-          alt="Northeast Data watermark"
-         className="w-64 h-auto object-contain"
-        />
+       <img
+  src="/logo.png"
+  alt="Northeast Data"
+  className="w-80 h-auto object-contain drop-shadow-md"
+/>
       </div>
 
       <div className="relative z-10 pl-[60px]">
