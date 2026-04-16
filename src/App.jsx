@@ -374,7 +374,7 @@ export default function AxisSchoolSecurityBrochure() {
         <img
           src="/logo.png"
           alt="Northeast Data watermark"
-         className="h-auto w-auto max-h-40 object-contain"
+         className="w-64 h-auto object-contain"
         />
       </div>
 
