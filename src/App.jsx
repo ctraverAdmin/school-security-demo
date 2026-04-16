@@ -567,9 +567,9 @@ export default function AxisSchoolSecurityBrochure() {
                         <div className="relative flex items-center justify-between gap-4">
                           <div>
                             <div>{item.label}</div>
-                            <div className="mt-2 text-xs font-black uppercase tracking-[0.18em] text-[#8b7a20]">
-                              Click to explore
-                            </div>
+                       <div className="mt-2 text-xs font-black uppercase tracking-[0.18em] text-[#b32025]">
+  Click to explore
+</div>
                           </div>
 
                           <div className="shrink-0 rounded-full border border-[#d8c96d] bg-[#fff4bf] px-3 py-2 text-sm font-black text-[#6b5a00] transition group-hover:translate-x-1">
@@ -1022,7 +1022,7 @@ export default function AxisSchoolSecurityBrochure() {
                     <div className="absolute inline-flex h-full w-full animate-pulse rounded-2xl border-2 border-[#f3d44a]/40" />
 
                     <a
-                      href="https://www.axis.com/products/axis-camera-station-edge"
+                      href="https://www.axis.com/en-us/products/axis-camera-station-pro"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="relative block h-full w-full"
