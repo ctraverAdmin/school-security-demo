@@ -389,11 +389,11 @@ export default function AxisSchoolSecurityBrochure() {
           <div className="relative w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
             <div className="flex w-full flex-col gap-6 px-8 py-8 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
               <div className="flex items-center gap-10">
-                <img
-                  src="/logo.png"
-                  alt="Northeast Data"
-                 className="h-auto w-[200px] object-contain md:w-[260px] lg:w-[320px]"
-                />
+           <img
+  src="/logo.png"
+  alt="Northeast Data"
+  className="h-auto w-[320px] object-contain md:w-[420px] lg:w-[520px] drop-shadow-md"
+/>
                 <div>
                   <div className="text-5xl font-black leading-[0.95] tracking-[-0.02em] text-[#111827] md:text-7xl lg:text-8xl">
                     Northeast Data Inc.
