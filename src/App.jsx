@@ -392,7 +392,7 @@ export default function AxisSchoolSecurityBrochure() {
                 <img
                   src="/logo.png"
                   alt="Northeast Data"
-                  className="h-auto w-auto max-h-40 object-contain md:max-h-52 lg:max-h-64"
+                 className="h-auto w-[200px] object-contain md:w-[260px] lg:w-[320px]"
                 />
                 <div>
                   <div className="text-5xl font-black leading-[0.95] tracking-[-0.02em] text-[#111827] md:text-7xl lg:text-8xl">
