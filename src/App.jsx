@@ -543,15 +543,15 @@ export default function AxisSchoolSecurityBrochure() {
                     </div>
                   </div>
 
-                  <div className="mt-6 overflow-hidden rounded-2xl border border-[#ece7cf] shadow-sm">
-                <iframe
-  className="w-full h-[400px] rounded-xl"
-  src="https://www.youtube.com/embed/LORK1sGpsMc"
-  title="Axis Video"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-/>
-                  </div>
+           <div className="overflow-hidden rounded-2xl border border-[#ece7cf] shadow-sm">
+  <iframe
+    className="w-full h-[420px]"
+    src="https://www.youtube.com/embed/LORK1sGpsMc?rel=0&modestbranding=1&playsinline=1"
+    title="Axis Video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
 
                   <div className="mt-6 grid gap-4">
                     {guidedCards.map((item, index) => (
