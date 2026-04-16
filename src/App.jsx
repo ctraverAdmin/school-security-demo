@@ -544,10 +544,13 @@ export default function AxisSchoolSecurityBrochure() {
                   </div>
 
                   <div className="mt-6 overflow-hidden rounded-2xl border border-[#ece7cf] shadow-sm">
-                    <video className="w-full object-cover" controls playsInline muted>
-                      <source src={assets.proVideo} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
+                <iframe
+  className="w-full h-[400px] rounded-xl"
+  src="https://www.youtube.com/embed/LORK1sGpsMc"
+  title="Axis Video"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
                   </div>
 
                   <div className="mt-6 grid gap-4">
