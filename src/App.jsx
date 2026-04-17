@@ -948,82 +948,7 @@ export default function AxisSchoolSecurityBrochure() {
           </div>
         </section>
 
-        <section id="cloud" className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-10 text-center">
-              <div className="text-xs font-black uppercase tracking-[0.3em] text-[#8b7a20]">
-                Cloud Solution Layer
-              </div>
-              <h2 className="mt-4 text-4xl font-black text-[#111827] md:text-6xl">
-                Extend the system with cloud-connected visibility and control
-              </h2>
-            </div>
-
-            <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
-              <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
-                <div className="mb-5 flex items-center justify-between gap-4">
-                  <div>
-                    <div className="text-xs font-black uppercase tracking-[0.24em] text-[#8b7a20]">
-                      How it works
-                    </div>
-                    <div className="mt-2 text-2xl font-black text-[#111827]">
-                      School-to-cloud architecture
-                    </div>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => {
-                    setBrochurePage(1);
-                    setBrochureFile("/brochures/axis/cloud_solution.pdf");
-                    setBrochureOpen(true);
-                  }}
-                  className="mb-5 rounded-xl border border-[#d4b83f] bg-[#fff4bf] px-5 py-3 text-sm font-bold text-[#6b5a00]"
-                >
-                  Click Here to View Cloud Solution Brochure
-                </button>
-
-                <div className="overflow-hidden rounded-[1.6rem] border border-[#ece7d2] bg-[#faf8ef]">
-                  <img
-                    src={assets.Cloudar}
-                    alt="School-to-cloud architecture"
-                    className="h-[420px] w-full object-contain"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                {Object.entries(cloudTabs).map(([key, value]) => (
-                  <button
-                    key={key}
-                    onClick={() => setCloudTab(key)}
-                    className={`w-full rounded-[1.5rem] border p-5 text-left transition ${
-                      cloudTab === key
-                        ? "border-[#d6bc43] bg-[#fff0a8] text-[#111827]"
-                        : "border-[#ddd7c0] bg-white text-[#1f2937] hover:bg-[#faf8ef]"
-                    }`}
-                  >
-                    <div className="text-xs font-black uppercase tracking-[0.24em] opacity-70">
-                      Cloud View
-                    </div>
-                    <div className="mt-2 text-2xl font-black">{value.title}</div>
-                    <div className="mt-3 space-y-1">
-                      {value.blurb.map((item) => (
-                        <div
-                          key={item}
-                          className="flex items-start gap-3 text-sm leading-6 opacity-80"
-                        >
-                          <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-current" />
-                          <div>{item}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         <section className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
@@ -1133,7 +1058,82 @@ export default function AxisSchoolSecurityBrochure() {
         </section>
 
      
+<section id="cloud" className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 text-center">
+              <div className="text-xs font-black uppercase tracking-[0.3em] text-[#8b7a20]">
+                Cloud Solution Layer
+              </div>
+              <h2 className="mt-4 text-4xl font-black text-[#111827] md:text-6xl">
+                Extend the system with cloud-connected visibility and control
+              </h2>
+            </div>
 
+            <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
+              <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
+                <div className="mb-5 flex items-center justify-between gap-4">
+                  <div>
+                    <div className="text-xs font-black uppercase tracking-[0.24em] text-[#8b7a20]">
+                      How it works
+                    </div>
+                    <div className="mt-2 text-2xl font-black text-[#111827]">
+                      School-to-cloud architecture
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => {
+                    setBrochurePage(1);
+                    setBrochureFile("/brochures/axis/cloud_solution.pdf");
+                    setBrochureOpen(true);
+                  }}
+                  className="mb-5 rounded-xl border border-[#d4b83f] bg-[#fff4bf] px-5 py-3 text-sm font-bold text-[#6b5a00]"
+                >
+                  Click Here to View Cloud Solution Brochure
+                </button>
+
+                <div className="overflow-hidden rounded-[1.6rem] border border-[#ece7d2] bg-[#faf8ef]">
+                  <img
+                    src={assets.Cloudar}
+                    alt="School-to-cloud architecture"
+                    className="h-[420px] w-full object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {Object.entries(cloudTabs).map(([key, value]) => (
+                  <button
+                    key={key}
+                    onClick={() => setCloudTab(key)}
+                    className={`w-full rounded-[1.5rem] border p-5 text-left transition ${
+                      cloudTab === key
+                        ? "border-[#d6bc43] bg-[#fff0a8] text-[#111827]"
+                        : "border-[#ddd7c0] bg-white text-[#1f2937] hover:bg-[#faf8ef]"
+                    }`}
+                  >
+                    <div className="text-xs font-black uppercase tracking-[0.24em] opacity-70">
+                      Cloud View
+                    </div>
+                    <div className="mt-2 text-2xl font-black">{value.title}</div>
+                    <div className="mt-3 space-y-1">
+                      {value.blurb.map((item) => (
+                        <div
+                          key={item}
+                          className="flex items-start gap-3 text-sm leading-6 opacity-80"
+                        >
+                          <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-current" />
+                          <div>{item}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
    
 
         <section className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
@@ -1197,7 +1197,7 @@ export default function AxisSchoolSecurityBrochure() {
     }}
     className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
   >
-    View School Security Solutions
+    View School Security Body Worn Cameras
   </button>
 </div>
               <div className="flex h-[320px] w-full items-center justify-center overflow-hidden rounded-[1.5rem] border border-[#ddd7c0] bg-[#f4f3ec]">
@@ -1251,11 +1251,11 @@ export default function AxisSchoolSecurityBrochure() {
                     Authorized Partner
                   </div>
                   <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
-                    <div className="flex h-20 w-full max-w-[240px] items-center justify-center rounded-xl border border-[#ece7d2] bg-white px-4 py-3">
+                    <div className="flex h-24 w-full max-w-[320px] items-center justify-center ...">
                       <img
                         src={axisPartnerLogo}
                         alt="Authorized Axis Partner"
-                        className="max-h-12 w-auto object-contain"
+                        className="h-full w-full object-contain"
                       />
                     </div>
                     <p className="max-w-xl text-sm leading-6 text-[#4b5563]">
@@ -1386,11 +1386,11 @@ export default function AxisSchoolSecurityBrochure() {
               </div>
             </div>
             <div className="flex flex-col items-start gap-3 md:items-end">
-              <div className="flex h-16 w-[220px] items-center justify-center rounded-xl border border-[#ddd7c0] bg-white px-4 py-3 shadow-sm">
+              <div className="flex h-20 w-[400px] items-center justify-center ...">
                 <img
                   src={axisPartnerLogo}
                   alt="Authorized Axis Partner"
-                  className="max-h-10 w-auto object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <div className="text-xs uppercase tracking-[0.18em] text-[#8b7a20]">
