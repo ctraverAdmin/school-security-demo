@@ -1417,7 +1417,7 @@ export default function AxisSchoolSecurityBrochure() {
             <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <div className="inline-flex rounded-full border border-[#d4b83f] bg-[#fff4bf] px-5 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#6b5a00]">
-                  Scan Me
+                  Scan or click Me
                 </div>
 
                 <h2 className="mt-5 text-4xl font-black text-[#111827] md:text-5xl">
@@ -1425,7 +1425,7 @@ export default function AxisSchoolSecurityBrochure() {
                 </h2>
 
                 <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b5563] md:text-lg">
-                  Scan this code to open the Axis education solutions page and
+                  Scan or click this code to open the Axis education solutions page and
                   explore more ideas around school safety, campus awareness, and
                   connected security technologies.
                 </p>
