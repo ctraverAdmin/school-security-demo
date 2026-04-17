@@ -464,9 +464,9 @@ export default function AxisSchoolSecurityBrochure() {
           {/* WATERMARK ONLY IN FIRST SECTION */}
           <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
             <img
-              src="/watermark.png"
+              src="/logo.png"
               alt="Watermark"
-              className="w-[950px] max-w-none object-contain opacity-60"
+              className="w-[950px] max-w-none object-contain opacity-15"
             />
           </div>
 
