@@ -1480,7 +1480,7 @@ export default function AxisSchoolSecurityBrochure() {
 
         <section className="bg-[#efefea] px-6 pb-20 pt-8 text-center md:px-10">
           <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-[#e0d389] bg-gradient-to-br from-[#fff7cf] via-[#fffbe6] to-white p-10 shadow-xl md:p-14">
-            <div className="text-xs font-black uppercase tracking-[0.32em] text-[#8b7a20]">
+            <div className="text-4xl font-black uppercase tracking-[0.32em] text-[#8b7a20]">
               Next Step
             </div>
             <h2 className="mt-4 text-4xl font-black text-[#111827] md:text-6xl">
