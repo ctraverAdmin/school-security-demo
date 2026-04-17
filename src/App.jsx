@@ -506,17 +506,16 @@ export default function AxisSchoolSecurityBrochure() {
           </div>
 
  <div className="w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
-  <div className="flex items-center px-8 py-8 md:px-14 lg:px-20">
+  <div className="px-8 py-8 md:px-14 lg:px-20">
     
-    {/* LOGO */}
-    <img
-      src="/logo.png"
-      alt="Northeast Data"
-      className="h-auto w-[180px] md:w-[240px] lg:w-[320px] object-contain -mr-6"
-    />
+    {/* ROW 1: LOGO + NAME */}
+    <div className="flex items-center">
+      <img
+        src="/logo.png"
+        alt="Northeast Data"
+        className="h-auto w-[180px] md:w-[240px] lg:w-[320px] object-contain -mr-6"
+      />
 
-    {/* TEXT BLOCK */}
-    <div>
       <div className="flex items-baseline gap-3">
         <span className="font-montserrat text-4xl font-semibold text-[#111827] md:text-6xl lg:text-7xl">
           NORTHEAST
@@ -525,18 +524,23 @@ export default function AxisSchoolSecurityBrochure() {
           DATA
         </span>
       </div>
+    </div>
 
-      {/* TAGLINE */}
-      <div className="mt-2 text-sm text-[#6b7280] md:text-base">
+    {/* ROW 2: TAGLINE LEFT, CONTACT RIGHT */}
+    <div className="mt-4 flex justify-between items-start">
+      
+      {/* TAGLINE (LEFT) */}
+      <div className="text-sm text-[#6b7280] md:text-base lg:text-lg">
         Network Integration &amp; Security Solutions
       </div>
 
-      {/* 👇 CONTACT NOW UNDER DATA */}
-      <div className="mt-4 text-sm leading-6 text-[#8b949e] md:text-base">
+      {/* CONTACT (RIGHT) */}
+      <div className="text-right text-sm leading-6 text-[#8b949e] md:text-base">
         <div>nedatainfo@northeastdata.com</div>
         <div>www.northeastdata.com</div>
         <div>Serving PA &amp; Nationwide</div>
       </div>
+
     </div>
 
   </div>
