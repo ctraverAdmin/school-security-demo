@@ -882,7 +882,7 @@ export default function AxisSchoolSecurityBrochure() {
         >
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 text-center">
-              <div className="text-xs font-black uppercase tracking-[0.3em] text-[#8b7a20]">
+              <div className="text-4xl font-black uppercase tracking-[0.3em] text-[#8b7a20]">
                 Interactive Campus Map
               </div>
               <h2 className="mt-4 text-4xl font-black text-[#111827] md:text-6xl">
@@ -1184,7 +1184,7 @@ export default function AxisSchoolSecurityBrochure() {
         >
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 text-center">
-              <div className="text-xs font-black uppercase tracking-[0.3em] text-[#8b7a20]">
+              <div className="text-4xl font-black uppercase tracking-[0.3em] text-[#8b7a20]">
                 Cloud Solution Layer
               </div>
               <h2 className="mt-4 text-4xl font-black text-[#111827] md:text-6xl">
