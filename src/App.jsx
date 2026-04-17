@@ -1366,7 +1366,7 @@ export default function AxisSchoolSecurityBrochure() {
           <div className="mx-auto max-w-7xl rounded-[2rem] border border-[#ddd7c0] bg-white p-8 shadow-xl">
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
-                <div className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7a20]">
+                <div className="text-4xl font-black uppercase tracking-[0.28em] text-[#8b7a20]">
                   Why Northeast Data
                 </div>
                 <h2 className="mt-3 text-3xl font-black text-[#111827] md:text-5xl">
