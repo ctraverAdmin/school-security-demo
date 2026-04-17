@@ -367,7 +367,7 @@ export default function AxisSchoolSecurityBrochure() {
   }, [isPlaying, steps.length]);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#efefea] text-[#1f2937]">
+    <div className="relative h-auto overflow-hidden bg-[#efefea] text-[#1f2937]">
       <div className="pointer-events-none fixed left-0 top-0 z-0 h-full w-4 bg-[#b32025]" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center opacity-[0.09]">
@@ -379,40 +379,39 @@ export default function AxisSchoolSecurityBrochure() {
       </div>
 
       <div className="relative z-10 pl-[60px]">
-        <section className="relative overflow-hidden border-b border-[#d9d7c8] bg-gradient-to-br from-[#f8f8f3] via-[#efefea] to-[#e6e3d5]">
+        <section className="relative overflow-hidden border-b border-[#d9d7c8] bg-gradient-to-br from-[#f8f8f3] via-[#efefea] to-[#e6e3d5] py-1">
           <div className="absolute inset-0 opacity-30">
             <div className="absolute -left-16 top-10 h-72 w-72 rounded-full bg-[#f7e8a3] blur-3xl" />
             <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#fff5c8] blur-3xl" />
             <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white blur-3xl" />
-          </div>
+          </div><div className="relative w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
+  <div className="flex w-full flex-col gap-4 px-8 py-2 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
+    <div className="flex items-center gap-10">
+  <img
+    src="/logo.png"
+    alt="Northeast Data"
+    className="h-[200px] md:h-[220px] lg:h-[400px] w-auto object-contain drop-shadow-md shrink-0"
+  />
 
-          <div className="relative w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
-            <div className="flex w-full flex-col gap-6 px-8 py-8 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
-              <div className="flex items-center gap-10">
-           <img
-  src="/logo.png"
-  alt="Northeast Data"
-  className="h-auto w-[320px] object-contain md:w-[420px] lg:w-[520px] drop-shadow-md"
-/>
-                <div>
-                  <div className="text-5xl font-black leading-[0.95] tracking-[-0.02em] text-[#111827] md:text-7xl lg:text-8xl">
-                    Northeast Data Inc.
-                  </div>
-                  <div className="mt-1 text-base font-medium text-[#6b7280] md:text-lg">
-                    Network Integration &amp; Security Solutions
-                  </div>
-                </div>
-              </div>
+  <div className="leading-none">
+    <div className="font-montserrat text-3xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-[#111827]">
+      NORTHEAST <span className="text-red-600 font-semibold">DATA</span>
+    </div>
+    <div className="mt-2 text-sm font-medium text-[#6b7280] md:text-base">
+      Network Integration &amp; Security Solutions
+    </div>
+  </div>
+</div>
 
-              <div className="text-left text-sm leading-7 text-[#6b7280] md:text-right md:text-base">
-                <div>nedatainfo@northeastdata.com</div>
-                <div>www.northeastdata.com</div>
-                <div>Serving PA &amp; Nationwide</div>
-              </div>
-            </div>
-          </div>
+    <div className="text-left text-sm leading-6 text-[#6b7280] md:text-right md:text-base">
+      <div>nedatainfo@northeastdata.com</div>
+      <div>www.northeastdata.com</div>
+      <div>Serving PA &amp; Nationwide</div>
+    </div>
+  </div>
+</div>
 
-          <div className="relative mx-auto max-w-full px-6 py-20 md:px-10 md:py-24">
+          <div className="relative mx-auto max-w-full px-1 py-0 md:px-0 md:py-0">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -658,7 +657,7 @@ export default function AxisSchoolSecurityBrochure() {
                       }}
                       className="rounded-xl border border-[#d6bc43] bg-[#fff0a8] px-4 py-2 text-sm font-black uppercase tracking-[0.14em] text-[#6b5a00] shadow-sm transition hover:-translate-y-0.5"
                     >
-                      {isPlaying ? "Pause" : "Play"}
+                      {isPlaying ? " " : " "}
                     </button>
                     <div className="text-sm font-black text-[#7a6500]">
                       {activeStep + 1} / {steps.length}
@@ -779,19 +778,12 @@ export default function AxisSchoolSecurityBrochure() {
             </div>
 
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
-                <div className="mb-4 flex items-center justify-between gap-4">
-                <div>
- <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#e4d487] bg-[#111827] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg">
-  <span className="animate-pulse text-sm">👆</span>
-  <span className="animate-pulse">Click the glowing dots</span>
+              <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-8 shadow-xl max-w-2xl mx-auto">
+                <div className="mb-4 flex items-center justify-end">
+  <div className="hidden rounded-full border border-[#e3d99b] bg-[#fff8d8] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#6b5a00] md:inline-flex">
+    Interactive Demo
+  </div>
 </div>
-</div>
-
-                  <div className="hidden rounded-full border border-[#e3d99b] bg-[#fff8d8] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#6b5a00] md:inline-flex">
-                    Interactive Demo
-                  </div>
-                </div>
 
                 <div className="relative overflow-hidden rounded-[1.75rem] border border-[#e5dfc7] bg-white">
                   <img
@@ -807,40 +799,50 @@ export default function AxisSchoolSecurityBrochure() {
                         setSelectedZone(key);
                         setAreaModalOpen(true);
                       }}
-                      className="absolute z-20 -translate-x-1/2 -translate-y-1/2 transition hover:scale-110"
+                      className="absolute z-20 -translate-x-1/2 -translate-y-1/2 cursor-pointer transition duration-200 hover:scale-125"
                       style={{ left: item.marker.left, top: item.marker.top }}
                       aria-label={item.name}
                       type="button"
                     >
-                      <div className="relative flex h-10 w-10 items-center justify-center">
-                        <motion.span
-                          className="absolute inline-flex h-10 w-10 rounded-full bg-[#f3d44a]/40"
-                          animate={{ scale: [1, 1.4, 1], opacity: [0.45, 0.1, 0.45] }}
-                          transition={{ repeat: Infinity, duration: 2 }}
-                        />
-                        <motion.span
-                          className="absolute inline-flex h-16 w-16 rounded-full bg-[#f3d44a]/15"
-                          animate={{ scale: [0.9, 1.15, 0.9], opacity: [0.18, 0.04, 0.18] }}
-                          transition={{ repeat: Infinity, duration: 2.6 }}
-                        />
-                        <span
-                          className={`relative flex h-8 w-8 items-center justify-center rounded-full border-4 shadow-md ${
-                            selectedZone === key
-                              ? "border-[#d1af22] bg-[#f3d44a]"
-                              : "border-[#f1e8b2] bg-white"
-                          }`}
-                        >
-                          <span
-                            className={`h-2.5 w-2.5 rounded-full ${
-                              selectedZone === key ? "bg-[#111827]" : "bg-[#d1af22]"
-                            }`}
-                          />
-                        </span>
-                      </div>
+                     <div className="relative flex h-12 w-12 items-center justify-center">
+  <motion.span
+    className="absolute inline-flex h-12 w-12 rounded-full bg-[#f3d44a]/50 blur-[2px]"
+    animate={{ scale: [1, 1.5, 1], opacity: [0.65, 0.18, 0.65] }}
+    transition={{ repeat: Infinity, duration: 1.8 }}
+  />
+  <motion.span
+    className="absolute inline-flex h-20 w-20 rounded-full bg-[#f3d44a]/20 blur-md"
+    animate={{ scale: [0.9, 1.25, 0.9], opacity: [0.3, 0.06, 0.3] }}
+    transition={{ repeat: Infinity, duration: 2.4 }}
+  />
+  <motion.span
+    className="absolute inline-flex h-28 w-28 rounded-full bg-[#f3d44a]/10 blur-xl"
+    animate={{ scale: [0.85, 1.15, 0.85], opacity: [0.2, 0.03, 0.2] }}
+    transition={{ repeat: Infinity, duration: 3 }}
+  />
+  <span
+    className={`relative flex h-9 w-9 items-center justify-center rounded-full border-4 shadow-[0_0_20px_rgba(243,212,74,0.65)] ${
+      selectedZone === key
+        ? "border-[#d1af22] bg-[#f3d44a]"
+        : "border-[#f7ecb5] bg-white"
+    }`}
+  >
+    <span
+      className={`h-3 w-3 rounded-full ${
+        selectedZone === key ? "bg-[#111827]" : "bg-[#d1af22]"
+      }`}
+    />
+  </span>
+</div>
                     </button>
                   ))}
                 </div>
-
+<div className="mt-4 flex justify-center">
+  <div className="inline-flex items-center gap-2 rounded-full border border-[#e4d487] bg-[#111827] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg">
+    <span className="animate-pulse text-sm">👆</span>
+    <span className="animate-pulse">Click the glowing dots on the map</span>
+  </div>
+</div>
                 <div className="mt-4 text-right text-xs font-black uppercase tracking-[0.16em] text-[#8b7a20]">
                   Interactive Campus Security Map
                 </div>
@@ -1349,14 +1351,7 @@ export default function AxisSchoolSecurityBrochure() {
               >
                 Book a Walkthrough
               </a>
-              <a
-                href="https://www.northeastdata.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-2xl border border-[#cfcbb6] bg-white px-8 py-4 text-base font-bold uppercase tracking-[0.18em] text-[#1f2937] shadow-sm transition hover:-translate-y-0.5"
-              >
-                Visit Northeast Data
-              </a>
+             
             </div>
           </div>
         </section>
@@ -1392,7 +1387,7 @@ export default function AxisSchoolSecurityBrochure() {
 
       {brochureOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 px-4 py-4">
-          <div className="relative h-[92vh] w-full max-w-6xl overflow-hidden rounded-2xl bg-white shadow-2xl">
+          <div className="relative h-[92vh] w-full max-w-[90wv] overflow-hidden rounded-2xl bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-[#e5e7eb] bg-[#f8f8f3] px-5 py-3">
               <div className="text-sm font-black uppercase tracking-[0.18em] text-[#8b7a20]">
                 Brochure Viewer
@@ -1417,7 +1412,7 @@ export default function AxisSchoolSecurityBrochure() {
       )}
 
       {areaModalOpen && (
-        <div className="fixed inset-0 z-[120] overflow-y-auto bg-black/60 px-4 py-6">
+        <div className="fixed inset-0 z-[120] flex items-center justify-center overflow-y-auto bg-black/60 px-4 py-6">
           <div className="relative h-[96vh] w-[95vw] max-w-[1500px] overflow-hidden rounded-2xl bg-white shadow-2xl">
             <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#ece7d2] bg-[#f8f8f3] px-6 py-4">
               <div>
