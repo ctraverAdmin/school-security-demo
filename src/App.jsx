@@ -739,7 +739,22 @@ export default function AxisSchoolSecurityBrochure() {
                       />
                     </div>
                   </div>
+            <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+    Learn More
+  </div>
 
+  <button
+    onClick={() => {
+      setBrochureFile('/securityandsafety.pdf');
+      setBrochurePage(1);
+      setBrochureOpen(true);
+    }}
+    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+  >
+    View The Culture of Security and Safety
+  </button>
+</div>
                   <div className="mt-8 rounded-2xl border border-[#e3d99b] bg-[#fff8d8] p-5">
                     <div className="text-xs font-black uppercase tracking-[0.22em] text-[#7a6500]">
                       What this means for you
@@ -780,11 +795,28 @@ export default function AxisSchoolSecurityBrochure() {
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
               <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-8 shadow-xl max-w-2xl mx-auto">
                 <div className="mb-4 flex items-center justify-end">
+                  
   <div className="hidden rounded-full border border-[#e3d99b] bg-[#fff8d8] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#6b5a00] md:inline-flex">
     Interactive Demo
   </div>
+  
 </div>
+            <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+    Learn More
+  </div>
 
+  <button
+    onClick={() => {
+      setBrochureFile('/k12brochure.pdf');
+      setBrochurePage(1);
+      setBrochureOpen(true);
+    }}
+    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+  >
+    View Design Solutions School Campuses
+  </button>
+</div>
                 <div className="relative overflow-hidden rounded-[1.75rem] border border-[#e5dfc7] bg-white">
                   <img
                     src={assets.campusSketchMap}
@@ -1001,6 +1033,7 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="text-xs font-black uppercase tracking-[0.24em] text-[#8b7a20]">
                     Main Video Platform
                   </div>
+      
                   <div className="mt-2 text-2xl font-black text-[#111827]">
                     AXIS Camera Station Pro
                   </div>
@@ -1072,7 +1105,22 @@ export default function AxisSchoolSecurityBrochure() {
                   ))}
                 </div>
               </div>
+            <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+    Learn More
+  </div>
 
+  <button
+    onClick={() => {
+      setBrochureFile('/analytics-brochure.pdf');
+      setBrochurePage(1);
+      setBrochureOpen(true);
+    }}
+    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+  >
+    View Analytics for School Campuses
+  </button>
+</div>
               <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
                 <img
                   src={assets.proPhone}
@@ -1083,6 +1131,8 @@ export default function AxisSchoolSecurityBrochure() {
             </div>
           </div>
         </section>
+
+     
 
    
 
@@ -1134,6 +1184,22 @@ export default function AxisSchoolSecurityBrochure() {
               <div className="mb-5 text-2xl font-black text-[#111827]">
                 See what fixed cameras may miss
               </div>
+                          <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+    Learn More
+  </div>
+
+  <button
+    onClick={() => {
+      setBrochureFile('/bodycam-solution.pdf');
+      setBrochurePage(1);
+      setBrochureOpen(true);
+    }}
+    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+  >
+    View School Security Solutions
+  </button>
+</div>
               <div className="flex h-[320px] w-full items-center justify-center overflow-hidden rounded-[1.5rem] border border-[#ddd7c0] bg-[#f4f3ec]">
                 <img
                   src={assets.bodycam}
@@ -1441,6 +1507,8 @@ export default function AxisSchoolSecurityBrochure() {
                           >
                             {item}
                           </div>
+
+                          
                         ))}
                       </div>
                     </div>
