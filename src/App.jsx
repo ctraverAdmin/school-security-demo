@@ -1,6 +1,35 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 
+function RotateDevicePrompt() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const checkOrientation = () => {
+      const isMobile = window.innerWidth < 768;
+      const isPortrait = window.innerHeight > window.innerWidth;
+      setShow(isMobile && isPortrait);
+    };
+
+    checkOrientation();
+    window.addEventListener("resize", checkOrientation);
+
+    return () => window.removeEventListener("resize", checkOrientation);
+  }, []);
+
+  if (!show) return null;
+
+  return (
+    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/90 p-6 text-center text-white">
+      <div className="mb-4 text-5xl animate-bounce">📱</div>
+      <div className="mb-3 text-2xl font-bold">Rotate Your Device</div>
+      <p className="text-lg opacity-80">
+        For the best experience, please turn your phone sideways.
+      </p>
+    </div>
+  );
+}
+
 function BrochureLink({ href, label }) {
   const [hovered, setHovered] = useState(false);
 
@@ -476,33 +505,44 @@ export default function AxisSchoolSecurityBrochure() {
             <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white blur-3xl" />
           </div>
 
-          <div className="relative z-10 w-full border-b border-[#d9d7c8] bg-[#f3f1ea]/85">
-            <div className="flex w-full flex-col gap-4 px-8 py-2 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
-              <div className="flex items-center gap-10">
-                <img
-                  src="/logo.png"
-                  alt="Northeast Data"
-                  className="h-[200px] w-auto shrink-0 object-contain drop-shadow-md md:h-[220px] lg:h-[400px]"
-                />
+ <div className="relative w-full border-b border-[#d9d7c8] bg-[#f3f1ea] overflow-visible">
+  <div className="flex w-full items-center justify-between px-8 py-10 md:px-14 lg:px-20">
 
-                <div className="leading-none">
-                  <div className="font-montserrat text-3xl font-semibold tracking-[-0.02em] text-[#111827] md:text-5xl lg:text-6xl">
-                    NORTHEAST{" "}
-                    <span className="font-semibold text-red-600">DATA</span>
-                  </div>
-                  <div className="mt-2 text-sm font-medium text-[#6b7280] md:text-base">
-                    Network Integration &amp; Security Solutions
-                  </div>
-                </div>
-              </div>
+    {/* LEFT SIDE (TEXT BLOCK) */}
+    <div className="relative pl-[140px] md:pl-[200px] lg:pl-[260px]">
+      
+      {/* LOGO (OVERHANGING) */}
+      <img
+        src="/logo.png"
+        alt="Northeast Data"
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-[180px] md:w-[240px] lg:w-[300px] object-contain"
+      />
 
-              <div className="text-left text-sm leading-6 text-[#6b7280] md:text-right md:text-base">
-                <div>nedatainfo@northeastdata.com</div>
-                <div>www.northeastdata.com</div>
-                <div>Serving PA &amp; Nationwide</div>
-              </div>
-            </div>
-          </div>
+      {/* COMPANY NAME */}
+      <div className="flex items-baseline gap-4">
+        <span className="font-montserrat text-5xl font-semibold tracking-[-0.02em] text-[#111827] md:text-7xl lg:text-8xl">
+          NORTHEAST
+        </span>
+        <span className="font-montserrat text-5xl font-semibold tracking-[-0.02em] text-red-600 md:text-7xl lg:text-8xl">
+          DATA
+        </span>
+      </div>
+
+      {/* TAGLINE */}
+      <div className="mt-2 text-base font-medium text-[#6b7280] md:text-lg">
+        Network Integration &amp; Security Solutions
+      </div>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="text-right text-base leading-8 text-[#8b949e] md:text-lg">
+      <div>nedatainfo@northeastdata.com</div>
+      <div>www.northeastdata.com</div>
+      <div>Serving PA &amp; Nationwide</div>
+    </div>
+
+  </div>
+</div>
 
           <div className="relative z-10 mx-auto max-w-full px-1 py-0 md:px-0 md:py-0">
             <motion.div
@@ -1362,55 +1402,67 @@ export default function AxisSchoolSecurityBrochure() {
           </div>
         </section>
 
-        <section className="bg-[#f6f5ef] px-6 py-16 md:px-10">
-          <div className="mx-auto max-w-7xl rounded-[2rem] border border-[#ddd7c0] bg-white p-8 shadow-xl">
-            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div>
-                <div className="text-4xl font-black uppercase tracking-[0.28em] text-[#8b7a20]">
-                  Why Northeast Data
-                </div>
-                <h2 className="mt-3 text-3xl font-black text-[#111827] md:text-5xl">
-                  The right technology matters, but so does the right partner
-                </h2>
-                <div className="mt-8 rounded-2xl border border-[#e5dfc7] bg-[#faf8ef] p-5">
-                  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
-                    Authorized Partner
-                  </div>
-                  <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
-                    <div className="flex h-24 w-full max-w-[320px] items-center justify-center">
-                      <img
-                        src={axisPartnerLogo}
-                        alt="Authorized Axis Partner"
-                        className="h-full w-full object-contain"
-                      />
-                    </div>
-                    <p className="max-w-xl text-sm leading-6 text-[#4b5563]">
-                      Northeast Data is an authorized Axis partner, helping
-                      schools evaluate, design, and implement security solutions
-                      that align with operational, safety, and budget goals.
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <section className="bg-[#f6f5ef] px-6 py-16 md:px-10">
+  <div className="mx-auto max-w-7xl rounded-[2rem] border border-[#ddd7c0] bg-white p-8 shadow-xl">
+    <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      
+    <div className="lg:col-span-2">
+  <div className="flex items-center gap-4 border-b border-[#e5dfc7] pb-4">
+    <span className="font-montserrat text-3xl font-semibold tracking-[0.22em] text-[#111827] md:text-5xl lg:text-6xl">
+  WHY NORTHEAST
+</span>
+    <span className="font-montserrat text-3xl font-semibold tracking-[0.22em] text-red-600 md:text-5xl lg:text-6xl">
+      DATA
+    </span>
+  </div>
+</div>
 
-              <div className="grid gap-4 md:grid-cols-2">
-                {[
-                  "Solution-focused guidance, not just product recommendations",
-                  "A practical approach to entrances, visibility, communication, and response",
-                  "Support for phased upgrades and long-term planning",
-                  "A more consultative experience for school leadership teams",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-[#e5dfc7] bg-[#fff9de] p-5 text-sm font-semibold leading-6 text-[#374151]"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
+      <div>
+        <h2 className="mt-0 text-3xl font-black text-[#111827] md:text-5xl">
+          The right technology matters, but so does the right partner
+        </h2>
+
+        <div className="mt-8 rounded-2xl border border-[#e5dfc7] bg-[#faf8ef] p-5">
+          <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+            Authorized Partner
           </div>
-        </section>
+
+          <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="flex h-24 w-full max-w-[320px] items-center justify-center">
+              <img
+                src={axisPartnerLogo}
+                alt="Authorized Axis Partner"
+                className="h-full w-full object-contain"
+              />
+            </div>
+
+            <p className="max-w-xl text-sm leading-6 text-[#4b5563]">
+              Northeast Data is an authorized Axis partner, helping
+              schools evaluate, design, and implement security solutions
+              that align with operational, safety, and budget goals.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {[
+          "Solution-focused guidance, not just product recommendations",
+          "A practical approach to entrances, visibility, communication, and response",
+          "Support for phased upgrades and long-term planning",
+          "A more consultative experience for school leadership teams",
+        ].map((item) => (
+          <div
+            key={item}
+            className="rounded-2xl border border-[#e5dfc7] bg-[#fff9de] p-5 text-sm font-semibold leading-6 text-[#374151]"
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
         <section className="bg-[#f6f5ef] px-6 py-20 md:px-10">
           <div className="mx-auto max-w-6xl rounded-[2.5rem] border border-[#e0d389] bg-gradient-to-br from-[#fff7cf] via-[#fffbe6] to-white p-8 shadow-xl md:p-12">
