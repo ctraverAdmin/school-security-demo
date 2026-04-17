@@ -505,40 +505,38 @@ export default function AxisSchoolSecurityBrochure() {
             <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white blur-3xl" />
           </div>
 
- <div className="relative w-full border-b border-[#d9d7c8] bg-[#f3f1ea] overflow-visible">
-  <div className="flex w-full items-center justify-between px-8 py-10 md:px-14 lg:px-20">
+ <div className="w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
+  <div className="flex items-center px-8 py-8 md:px-14 lg:px-20">
+    
+    {/* LOGO */}
+    <img
+      src="/logo.png"
+      alt="Northeast Data"
+      className="h-auto w-[180px] md:w-[240px] lg:w-[320px] object-contain -mr-6"
+    />
 
-    {/* LEFT SIDE (TEXT BLOCK) */}
-    <div className="relative pl-[140px] md:pl-[200px] lg:pl-[260px]">
-      
-      {/* LOGO (OVERHANGING) */}
-      <img
-        src="/logo.png"
-        alt="Northeast Data"
-        className="absolute left-0 top-1/2 -translate-y-1/2 w-[180px] md:w-[240px] lg:w-[300px] object-contain"
-      />
-
-      {/* COMPANY NAME */}
-      <div className="flex items-baseline gap-4">
-        <span className="font-montserrat text-5xl font-semibold tracking-[-0.02em] text-[#111827] md:text-7xl lg:text-8xl">
+    {/* TEXT BLOCK */}
+    <div>
+      <div className="flex items-baseline gap-3">
+        <span className="font-montserrat text-4xl font-semibold text-[#111827] md:text-6xl lg:text-7xl">
           NORTHEAST
         </span>
-        <span className="font-montserrat text-5xl font-semibold tracking-[-0.02em] text-red-600 md:text-7xl lg:text-8xl">
+        <span className="font-montserrat text-4xl font-semibold text-red-600 md:text-6xl lg:text-7xl">
           DATA
         </span>
       </div>
 
       {/* TAGLINE */}
-      <div className="mt-2 text-base font-medium text-[#6b7280] md:text-lg">
+      <div className="mt-2 text-sm text-[#6b7280] md:text-base">
         Network Integration &amp; Security Solutions
       </div>
-    </div>
 
-    {/* RIGHT SIDE */}
-    <div className="text-right text-base leading-8 text-[#8b949e] md:text-lg">
-      <div>nedatainfo@northeastdata.com</div>
-      <div>www.northeastdata.com</div>
-      <div>Serving PA &amp; Nationwide</div>
+      {/* 👇 CONTACT NOW UNDER DATA */}
+      <div className="mt-4 text-sm leading-6 text-[#8b949e] md:text-base">
+        <div>nedatainfo@northeastdata.com</div>
+        <div>www.northeastdata.com</div>
+        <div>Serving PA &amp; Nationwide</div>
+      </div>
     </div>
 
   </div>
