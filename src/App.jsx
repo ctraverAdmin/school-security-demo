@@ -38,10 +38,24 @@ export default function AxisSchoolSecurityBrochure() {
   const [cloudTab, setCloudTab] = useState("overview");
   const [brochureOpen, setBrochureOpen] = useState(false);
   const [brochurePage, setBrochurePage] = useState(1);
-  const [brochureFile, setBrochureFile] = useState("/brochures/axis/cloud_solution.pdf");
+  const [brochureFile, setBrochureFile] = useState(
+    "/brochures/axis/cloud_solution.pdf"
+  );
   const [areaModalOpen, setAreaModalOpen] = useState(false);
+  const [leftMenuOpen, setLeftMenuOpen] = useState(false);
 
   const axisPartnerLogo = "/images/axis/authorized-partner-logo.jpg";
+
+  const quickNavItems = [
+    { label: "Top of Page", href: "#top" },
+    { label: "Simulation", href: "#simulation" },
+    { label: "Campus Map", href: "#map" },
+    { label: "Cloud", href: "#cloud" },
+    {
+      label: "Book a Walkthrough",
+      href: "mailto:nedatainfo@northeastdata.com?subject=School%20Security%20Walkthrough",
+    },
+  ];
 
   const assets = {
     proMain: "/images/responsemanaged.png",
@@ -367,51 +381,130 @@ export default function AxisSchoolSecurityBrochure() {
   }, [isPlaying, steps.length]);
 
   return (
-    <div className="relative h-auto overflow-hidden bg-[#efefea] text-[#1f2937]">
-      <div className="pointer-events-none fixed left-0 top-0 z-0 h-full w-4 bg-[#b32025]" />
+    <div
+      id="top"
+      className="relative min-h-screen overflow-hidden bg-[#efefea] text-[#1f2937]"
+    >
+      {/* RED LEFT BAR */}
+      <div className="pointer-events-none fixed left-0 top-0 z-[150] h-full w-4 bg-[#b32025]" />
 
-      <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center opacity-[0.09]">
-       <img
-  src="/logo.png"
-  alt="Northeast Data"
-  className="w-80 h-auto object-contain drop-shadow-md"
-/>
+      {/* LEFT MENU BUTTON */}
+      <div className="fixed left-4 top-1/2 z-[200] -translate-y-1/2">
+        <button
+          type="button"
+          onClick={() => setLeftMenuOpen(true)}
+          className="flex h-14 w-14 items-center justify-center rounded-r-2xl rounded-l-xl border border-[#d4b83f] bg-[#f6dd75] text-2xl font-black text-[#1f2937] shadow-xl transition hover:scale-105"
+          aria-label="Open quick navigation menu"
+        >
+          ☰
+        </button>
       </div>
+
+      {/* LEFT MENU PANEL */}
+      <AnimatePresence>
+        {leftMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setLeftMenuOpen(false)}
+              className="fixed inset-0 z-[210] bg-black/35"
+            />
+
+            <motion.div
+              initial={{ x: -320, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -320, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="fixed left-0 top-0 z-[220] flex h-full w-[300px] flex-col border-r border-[#ddd7c0] bg-[#f8f8f3] shadow-2xl"
+            >
+              <div className="flex items-center justify-between border-b border-[#e5dfc7] px-5 py-4">
+                <div>
+                  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+                    Quick Menu
+                  </div>
+                  <div className="mt-1 text-xl font-black text-[#111827]">
+                    Navigate Brochure
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setLeftMenuOpen(false)}
+                  className="rounded-lg bg-[#111827] px-3 py-2 text-sm font-bold text-white"
+                >
+                  Close
+                </button>
+              </div>
+
+              <div className="flex-1 space-y-3 overflow-y-auto px-4 py-5">
+                {quickNavItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setLeftMenuOpen(false)}
+                    className="block rounded-2xl border border-[#e3d99b] bg-white px-4 py-4 text-base font-bold text-[#1f2937] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#fff8d8]"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+
+              <div className="border-t border-[#e5dfc7] px-5 py-4 text-xs leading-5 text-[#6b7280]">
+                Use this menu to jump to the main sections of the brochure.
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       <div className="relative z-10 pl-[60px]">
         <section className="relative overflow-hidden border-b border-[#d9d7c8] bg-gradient-to-br from-[#f8f8f3] via-[#efefea] to-[#e6e3d5] py-1">
-          <div className="absolute inset-0 opacity-30">
+          {/* WATERMARK ONLY IN FIRST SECTION */}
+          <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+            <img
+              src="/watermark.png"
+              alt="Watermark"
+              className="w-[950px] max-w-none object-contain opacity-20"
+            />
+          </div>
+
+          <div className="absolute inset-0 z-[1] opacity-30">
             <div className="absolute -left-16 top-10 h-72 w-72 rounded-full bg-[#f7e8a3] blur-3xl" />
             <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#fff5c8] blur-3xl" />
             <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white blur-3xl" />
-          </div><div className="relative w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
-  <div className="flex w-full flex-col gap-4 px-8 py-2 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
-    <div className="flex items-center gap-10">
-  <img
-    src="/logo.png"
-    alt="Northeast Data"
-    className="h-[200px] md:h-[220px] lg:h-[400px] w-auto object-contain drop-shadow-md shrink-0"
-  />
+          </div>
 
-  <div className="leading-none">
-    <div className="font-montserrat text-3xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-[#111827]">
-      NORTHEAST <span className="text-red-600 font-semibold">DATA</span>
-    </div>
-    <div className="mt-2 text-sm font-medium text-[#6b7280] md:text-base">
-      Network Integration &amp; Security Solutions
-    </div>
-  </div>
-</div>
+          <div className="relative z-10 w-full border-b border-[#d9d7c8] bg-[#f3f1ea]/85">
+            <div className="flex w-full flex-col gap-4 px-8 py-2 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
+              <div className="flex items-center gap-10">
+                <img
+                  src="/logo.png"
+                  alt="Northeast Data"
+                  className="h-[200px] w-auto shrink-0 object-contain drop-shadow-md md:h-[220px] lg:h-[400px]"
+                />
 
-    <div className="text-left text-sm leading-6 text-[#6b7280] md:text-right md:text-base">
-      <div>nedatainfo@northeastdata.com</div>
-      <div>www.northeastdata.com</div>
-      <div>Serving PA &amp; Nationwide</div>
-    </div>
-  </div>
-</div>
+                <div className="leading-none">
+                  <div className="font-montserrat text-3xl font-semibold tracking-[-0.02em] text-[#111827] md:text-5xl lg:text-6xl">
+                    NORTHEAST{" "}
+                    <span className="font-semibold text-red-600">DATA</span>
+                  </div>
+                  <div className="mt-2 text-sm font-medium text-[#6b7280] md:text-base">
+                    Network Integration &amp; Security Solutions
+                  </div>
+                </div>
+              </div>
 
-          <div className="relative mx-auto max-w-full px-1 py-0 md:px-0 md:py-0">
+              <div className="text-left text-sm leading-6 text-[#6b7280] md:text-right md:text-base">
+                <div>nedatainfo@northeastdata.com</div>
+                <div>www.northeastdata.com</div>
+                <div>Serving PA &amp; Nationwide</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-full px-1 py-0 md:px-0 md:py-0">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -542,15 +635,15 @@ export default function AxisSchoolSecurityBrochure() {
                     </div>
                   </div>
 
-           <div className="overflow-hidden rounded-2xl border border-[#ece7cf] shadow-sm">
-  <iframe
-    className="w-full h-[420px]"
-    src="https://www.youtube.com/embed/LORK1sGpsMc?rel=0&modestbranding=1&playsinline=1"
-    title="Axis Video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  />
-</div>
+                  <div className="overflow-hidden rounded-2xl border border-[#ece7cf] shadow-sm">
+                    <iframe
+                      className="h-[420px] w-full"
+                      src="https://www.youtube.com/embed/LORK1sGpsMc?rel=0&modestbranding=1&playsinline=1"
+                      title="Axis Video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
 
                   <div className="mt-6 grid gap-4">
                     {guidedCards.map((item, index) => (
@@ -569,9 +662,9 @@ export default function AxisSchoolSecurityBrochure() {
                         <div className="relative flex items-center justify-between gap-4">
                           <div>
                             <div>{item.label}</div>
-                       <div className="mt-2 text-xs font-black uppercase tracking-[0.18em] text-[#b32025]">
-  Click to explore
-</div>
+                            <div className="mt-2 text-xs font-black uppercase tracking-[0.18em] text-[#b32025]">
+                              Click to explore
+                            </div>
                           </div>
 
                           <div className="shrink-0 rounded-full border border-[#d8c96d] bg-[#fff4bf] px-3 py-2 text-sm font-black text-[#6b5a00] transition group-hover:translate-x-1">
@@ -696,8 +789,12 @@ export default function AxisSchoolSecurityBrochure() {
                         <div className="text-lg font-extrabold uppercase tracking-[0.25em] text-amber-600 md:text-xl">
                           {i === 0 ? "Start Here → Step 1" : `Step ${i + 1}`}
                         </div>
-                        <div className="mt-1 text-lg font-black">{step.title}</div>
-                        <div className="mt-1 text-sm opacity-80">{step.system}</div>
+                        <div className="mt-1 text-lg font-black">
+                          {step.title}
+                        </div>
+                        <div className="mt-1 text-sm opacity-80">
+                          {step.system}
+                        </div>
                       </div>
                     </button>
                   ))}
@@ -739,22 +836,24 @@ export default function AxisSchoolSecurityBrochure() {
                       />
                     </div>
                   </div>
-            <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
-  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
-    Learn More
-  </div>
 
-  <button
-    onClick={() => {
-      setBrochureFile('/securityandsafety.pdf');
-      setBrochurePage(1);
-      setBrochureOpen(true);
-    }}
-    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
-  >
-    View The Culture of Security and Safety
-  </button>
-</div>
+                  <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+                    <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+                      Learn More
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        setBrochureFile("/securityandsafety.pdf");
+                        setBrochurePage(1);
+                        setBrochureOpen(true);
+                      }}
+                      className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+                    >
+                      View The Culture of Security and Safety
+                    </button>
+                  </div>
+
                   <div className="mt-8 rounded-2xl border border-[#e3d99b] bg-[#fff8d8] p-5">
                     <div className="text-xs font-black uppercase tracking-[0.22em] text-[#7a6500]">
                       What this means for you
@@ -777,7 +876,10 @@ export default function AxisSchoolSecurityBrochure() {
           </div>
         </section>
 
-        <section id="map" className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
+        <section
+          id="map"
+          className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10"
+        >
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 text-center">
               <div className="text-xs font-black uppercase tracking-[0.3em] text-[#8b7a20]">
@@ -787,41 +889,42 @@ export default function AxisSchoolSecurityBrochure() {
                 Explore how security works across the building
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#6b7280] md:text-lg">
-                Click the glowing security points to see where risk exists and how a connected
-                Axis solution improves visibility, communication, and response.
+                Click the glowing security points to see where risk exists and
+                how a connected Axis solution improves visibility,
+                communication, and response.
               </p>
             </div>
 
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-8 shadow-xl max-w-2xl mx-auto">
+              <div className="mx-auto max-w-2xl rounded-[2rem] border border-[#ddd7c0] bg-white p-8 shadow-xl">
                 <div className="mb-4 flex items-center justify-end">
-                  
-  <div className="hidden rounded-full border border-[#e3d99b] bg-[#fff8d8] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#6b5a00] md:inline-flex">
-    Interactive Demo
-  </div>
-  
-</div>
-            <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
-  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
-    Learn More
-  </div>
+                  <div className="hidden rounded-full border border-[#e3d99b] bg-[#fff8d8] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#6b5a00] md:inline-flex">
+                    Interactive Demo
+                  </div>
+                </div>
 
-  <button
-    onClick={() => {
-      setBrochureFile('/k12brochure.pdf');
-      setBrochurePage(1);
-      setBrochureOpen(true);
-    }}
-    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
-  >
-    View Design Solutions School Campuses
-  </button>
-</div>
+                <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+                  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+                    Learn More
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      setBrochureFile("/k12brochure.pdf");
+                      setBrochurePage(1);
+                      setBrochureOpen(true);
+                    }}
+                    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+                  >
+                    View Design Solutions School Campuses
+                  </button>
+                </div>
+
                 <div className="relative overflow-hidden rounded-[1.75rem] border border-[#e5dfc7] bg-white">
                   <img
                     src={assets.campusSketchMap}
                     alt="Interactive campus sketch map"
-                    className="block w-full h-auto object-contain"
+                    className="block h-auto w-full object-contain"
                   />
 
                   {Object.entries(buildingZones).map(([key, item]) => (
@@ -836,45 +939,60 @@ export default function AxisSchoolSecurityBrochure() {
                       aria-label={item.name}
                       type="button"
                     >
-                     <div className="relative flex h-12 w-12 items-center justify-center">
-  <motion.span
-    className="absolute inline-flex h-12 w-12 rounded-full bg-[#f3d44a]/50 blur-[2px]"
-    animate={{ scale: [1, 1.5, 1], opacity: [0.65, 0.18, 0.65] }}
-    transition={{ repeat: Infinity, duration: 1.8 }}
-  />
-  <motion.span
-    className="absolute inline-flex h-20 w-20 rounded-full bg-[#f3d44a]/20 blur-md"
-    animate={{ scale: [0.9, 1.25, 0.9], opacity: [0.3, 0.06, 0.3] }}
-    transition={{ repeat: Infinity, duration: 2.4 }}
-  />
-  <motion.span
-    className="absolute inline-flex h-28 w-28 rounded-full bg-[#f3d44a]/10 blur-xl"
-    animate={{ scale: [0.85, 1.15, 0.85], opacity: [0.2, 0.03, 0.2] }}
-    transition={{ repeat: Infinity, duration: 3 }}
-  />
-  <span
-    className={`relative flex h-9 w-9 items-center justify-center rounded-full border-4 shadow-[0_0_20px_rgba(243,212,74,0.65)] ${
-      selectedZone === key
-        ? "border-[#d1af22] bg-[#f3d44a]"
-        : "border-[#f7ecb5] bg-white"
-    }`}
-  >
-    <span
-      className={`h-3 w-3 rounded-full ${
-        selectedZone === key ? "bg-[#111827]" : "bg-[#d1af22]"
-      }`}
-    />
-  </span>
-</div>
+                      <div className="relative flex h-12 w-12 items-center justify-center">
+                        <motion.span
+                          className="absolute inline-flex h-12 w-12 rounded-full bg-[#f3d44a]/50 blur-[2px]"
+                          animate={{
+                            scale: [1, 1.5, 1],
+                            opacity: [0.65, 0.18, 0.65],
+                          }}
+                          transition={{ repeat: Infinity, duration: 1.8 }}
+                        />
+                        <motion.span
+                          className="absolute inline-flex h-20 w-20 rounded-full bg-[#f3d44a]/20 blur-md"
+                          animate={{
+                            scale: [0.9, 1.25, 0.9],
+                            opacity: [0.3, 0.06, 0.3],
+                          }}
+                          transition={{ repeat: Infinity, duration: 2.4 }}
+                        />
+                        <motion.span
+                          className="absolute inline-flex h-28 w-28 rounded-full bg-[#f3d44a]/10 blur-xl"
+                          animate={{
+                            scale: [0.85, 1.15, 0.85],
+                            opacity: [0.2, 0.03, 0.2],
+                          }}
+                          transition={{ repeat: Infinity, duration: 3 }}
+                        />
+                        <span
+                          className={`relative flex h-9 w-9 items-center justify-center rounded-full border-4 shadow-[0_0_20px_rgba(243,212,74,0.65)] ${
+                            selectedZone === key
+                              ? "border-[#d1af22] bg-[#f3d44a]"
+                              : "border-[#f7ecb5] bg-white"
+                          }`}
+                        >
+                          <span
+                            className={`h-3 w-3 rounded-full ${
+                              selectedZone === key
+                                ? "bg-[#111827]"
+                                : "bg-[#d1af22]"
+                            }`}
+                          />
+                        </span>
+                      </div>
                     </button>
                   ))}
                 </div>
-<div className="mt-4 flex justify-center">
-  <div className="inline-flex items-center gap-2 rounded-full border border-[#e4d487] bg-[#111827] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg">
-    <span className="animate-pulse text-sm">👆</span>
-    <span className="animate-pulse">Click the glowing dots on the map</span>
-  </div>
-</div>
+
+                <div className="mt-4 flex justify-center">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-[#e4d487] bg-[#111827] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg">
+                    <span className="animate-pulse text-sm">👆</span>
+                    <span className="animate-pulse">
+                      Click the glowing dots on the map
+                    </span>
+                  </div>
+                </div>
+
                 <div className="mt-4 text-right text-xs font-black uppercase tracking-[0.16em] text-[#8b7a20]">
                   Interactive Campus Security Map
                 </div>
@@ -891,7 +1009,9 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7a20]">
                     Selected Area
                   </div>
-                  <h3 className="mt-3 text-4xl font-black text-[#111827]">{zone.name}</h3>
+                  <h3 className="mt-3 text-4xl font-black text-[#111827]">
+                    {zone.name}
+                  </h3>
                   <div className="mt-4 inline-flex rounded-full border border-[#eedf93] bg-[#fff6c9] px-4 py-2 text-sm font-bold text-[#6b5a00]">
                     Risk: {zone.risk}
                   </div>
@@ -940,15 +1060,15 @@ export default function AxisSchoolSecurityBrochure() {
                     >
                       View Area Equipment
                     </button>
-                    <p className="mt-2 text-lg leading-8 text-[#374151]">{zone.result}</p>
+                    <p className="mt-2 text-lg leading-8 text-[#374151]">
+                      {zone.result}
+                    </p>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
           </div>
         </section>
-
-        
 
         <section className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
@@ -958,7 +1078,6 @@ export default function AxisSchoolSecurityBrochure() {
                   <div className="text-xs font-black uppercase tracking-[0.24em] text-[#8b7a20]">
                     Main Video Platform
                   </div>
-      
                   <div className="mt-2 text-2xl font-black text-[#111827]">
                     AXIS Camera Station Pro
                   </div>
@@ -1030,22 +1149,24 @@ export default function AxisSchoolSecurityBrochure() {
                   ))}
                 </div>
               </div>
-            <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
-  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
-    Learn More
-  </div>
 
-  <button
-    onClick={() => {
-      setBrochureFile('/analytics-brochure.pdf');
-      setBrochurePage(1);
-      setBrochureOpen(true);
-    }}
-    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
-  >
-    View Analytics for School Campuses
-  </button>
-</div>
+              <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+                <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+                  Learn More
+                </div>
+
+                <button
+                  onClick={() => {
+                    setBrochureFile("/analytics-brochure.pdf");
+                    setBrochurePage(1);
+                    setBrochureOpen(true);
+                  }}
+                  className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+                >
+                  View Analytics for School Campuses
+                </button>
+              </div>
+
               <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
                 <img
                   src={assets.proPhone}
@@ -1057,8 +1178,10 @@ export default function AxisSchoolSecurityBrochure() {
           </div>
         </section>
 
-     
-<section id="cloud" className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
+        <section
+          id="cloud"
+          className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10"
+        >
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 text-center">
               <div className="text-xs font-black uppercase tracking-[0.3em] text-[#8b7a20]">
@@ -1116,7 +1239,9 @@ export default function AxisSchoolSecurityBrochure() {
                     <div className="text-xs font-black uppercase tracking-[0.24em] opacity-70">
                       Cloud View
                     </div>
-                    <div className="mt-2 text-2xl font-black">{value.title}</div>
+                    <div className="mt-2 text-2xl font-black">
+                      {value.title}
+                    </div>
                     <div className="mt-3 space-y-1">
                       {value.blurb.map((item) => (
                         <div
@@ -1134,7 +1259,6 @@ export default function AxisSchoolSecurityBrochure() {
             </div>
           </div>
         </section>
-   
 
         <section className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
@@ -1184,22 +1308,24 @@ export default function AxisSchoolSecurityBrochure() {
               <div className="mb-5 text-2xl font-black text-[#111827]">
                 See what fixed cameras may miss
               </div>
-                          <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
-  <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
-    Learn More
-  </div>
 
-  <button
-    onClick={() => {
-      setBrochureFile('/bodycam-solution.pdf');
-      setBrochurePage(1);
-      setBrochureOpen(true);
-    }}
-    className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
-  >
-    View School Security Body Worn Cameras
-  </button>
-</div>
+              <div className="mt-6 rounded-2xl border border-[#ddd7c0] bg-[#f8f8f3] p-4">
+                <div className="text-xs font-black uppercase tracking-[0.22em] text-[#8b7a20]">
+                  Learn More
+                </div>
+
+                <button
+                  onClick={() => {
+                    setBrochureFile("/bodycam-solution.pdf");
+                    setBrochurePage(1);
+                    setBrochureOpen(true);
+                  }}
+                  className="mt-3 w-full rounded-xl border border-[#d4b83f] bg-[#f6dd75] px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-[#1f2937] transition hover:-translate-y-0.5"
+                >
+                  View School Security Body Worn Cameras
+                </button>
+              </div>
+
               <div className="flex h-[320px] w-full items-center justify-center overflow-hidden rounded-[1.5rem] border border-[#ddd7c0] bg-[#f4f3ec]">
                 <img
                   src={assets.bodycam}
@@ -1251,7 +1377,7 @@ export default function AxisSchoolSecurityBrochure() {
                     Authorized Partner
                   </div>
                   <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
-                    <div className="flex h-24 w-full max-w-[320px] items-center justify-center ...">
+                    <div className="flex h-24 w-full max-w-[320px] items-center justify-center">
                       <img
                         src={axisPartnerLogo}
                         alt="Authorized Axis Partner"
@@ -1299,9 +1425,9 @@ export default function AxisSchoolSecurityBrochure() {
                 </h2>
 
                 <p className="mt-4 max-w-2xl text-base leading-7 text-[#4b5563] md:text-lg">
-                  Scan this code to open the Axis education solutions page and explore
-                  more ideas around school safety, campus awareness, and connected
-                  security technologies.
+                  Scan this code to open the Axis education solutions page and
+                  explore more ideas around school safety, campus awareness, and
+                  connected security technologies.
                 </p>
 
                 <div className="mt-6 space-y-3">
@@ -1367,7 +1493,6 @@ export default function AxisSchoolSecurityBrochure() {
               >
                 Book a Walkthrough
               </a>
-             
             </div>
           </div>
         </section>
@@ -1375,18 +1500,21 @@ export default function AxisSchoolSecurityBrochure() {
         <footer className="border-t border-[#d9d7c8] bg-[#f3f1ea] px-6 py-10 md:px-10">
           <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <div className="text-lg font-black text-[#111827]">Northeast Data Inc.</div>
+              <div className="text-lg font-black text-[#111827]">
+                Northeast Data Inc.
+              </div>
               <div className="mt-1 text-sm leading-6 text-[#6b7280]">
                 Network Integration &amp; Security Solutions
               </div>
               <div className="mt-3 text-sm leading-6 text-[#6b7280]">
-                Axis products and solutions shown in this brochure are presented by
-                Northeast Data as an authorized partner. All trademarks and brand
-                assets remain the property of their respective owners.
+                Axis products and solutions shown in this brochure are
+                presented by Northeast Data as an authorized partner. All
+                trademarks and brand assets remain the property of their
+                respective owners.
               </div>
             </div>
             <div className="flex flex-col items-start gap-3 md:items-end">
-              <div className="flex h-20 w-[400px] items-center justify-center ...">
+              <div className="flex h-20 w-[400px] items-center justify-center">
                 <img
                   src={axisPartnerLogo}
                   alt="Authorized Axis Partner"
@@ -1403,7 +1531,7 @@ export default function AxisSchoolSecurityBrochure() {
 
       {brochureOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 px-4 py-4">
-          <div className="relative h-[92vh] w-full max-w-[90wv] overflow-hidden rounded-2xl bg-white shadow-2xl">
+          <div className="relative h-[92vh] w-full max-w-[90vw] overflow-hidden rounded-2xl bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-[#e5e7eb] bg-[#f8f8f3] px-5 py-3">
               <div className="text-sm font-black uppercase tracking-[0.18em] text-[#8b7a20]">
                 Brochure Viewer
@@ -1507,8 +1635,6 @@ export default function AxisSchoolSecurityBrochure() {
                           >
                             {item}
                           </div>
-
-                          
                         ))}
                       </div>
                     </div>
