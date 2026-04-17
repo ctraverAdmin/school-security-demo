@@ -386,14 +386,14 @@ export default function AxisSchoolSecurityBrochure() {
       className="relative min-h-screen overflow-hidden bg-[#efefea] text-[#1f2937]"
     >
       {/* RED LEFT BAR */}
-      <div className="pointer-events-none fixed left-0 top-0 z-[150] h-full w-4 bg-[#b32025]" />
+      <div className="pointer-events-none fixed left-0 top-0 z-[150] h-full w-12 bg-[#b32025]" />
 
       {/* LEFT MENU BUTTON */}
-      <div className="fixed left-4 top-1/2 z-[200] -translate-y-1/2">
+      <div className="fixed left-12 top-10 z-[200] -translate-y-1/2">
         <button
           type="button"
           onClick={() => setLeftMenuOpen(true)}
-          className="flex h-14 w-14 items-center justify-center rounded-r-2xl rounded-l-xl border border-[#d4b83f] bg-[#f6dd75] text-2xl font-black text-[#1f2937] shadow-xl transition hover:scale-105"
+          className="flex h-14 w-13 items-center justify-center rounded-r-2xl rounded-l-1xl border border-[#d4b83f] bg-[#f6dd75] text-2xl font-black text-[#1f2937] shadow-xl transition hover:scale-105"
           aria-label="Open quick navigation menu"
         >
           ☰
@@ -466,7 +466,7 @@ export default function AxisSchoolSecurityBrochure() {
             <img
               src="/watermark.png"
               alt="Watermark"
-              className="w-[950px] max-w-none object-contain opacity-20"
+              className="w-[950px] max-w-none object-contain opacity-50"
             />
           </div>
 
