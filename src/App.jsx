@@ -466,7 +466,7 @@ export default function AxisSchoolSecurityBrochure() {
             <img
               src="/watermark.png"
               alt="Watermark"
-              className="w-[950px] max-w-none object-contain opacity-50"
+              className="w-[950px] max-w-none object-contain opacity-60"
             />
           </div>
 
