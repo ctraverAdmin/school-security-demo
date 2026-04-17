@@ -1084,57 +1084,7 @@ export default function AxisSchoolSecurityBrochure() {
           </div>
         </section>
 
-        <section className="border-t border-[#ddd9c8] bg-[#efefea] px-6 py-24 md:px-10">
-          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
-            <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-6 shadow-xl">
-              <div className="mb-5 text-2xl font-black text-[#111827]">
-                AXIS Camera Station Edge
-              </div>
-              <div className="overflow-hidden rounded-[1.6rem] border border-[#ece7d2] bg-gradient-to-br from-[#fff8d8] via-[#fff6c9] to-white p-8">
-                <img
-                  src={assets.proMonitor}
-                  alt="AXIS Camera Station Edge visual"
-                  className="w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <div className="rounded-[2rem] border border-[#ddd7c0] bg-white p-7 shadow-xl">
-                <div className="text-xs font-black uppercase tracking-[0.28em] text-[#8b7a20]">
-                  Why it stands out
-                </div>
-                <h3 className="mt-3 text-3xl font-black text-[#111827]">
-                  Built for simple daily use
-                </h3>
-                <div className="mt-6 space-y-3">
-                  {[
-                    "Gives staff live video access without a complicated workflow.",
-                    "Makes it easier to review events, verify activity, and stay aware.",
-                    "Supports mobile use so decision-makers can stay connected away from a desk.",
-                    "Provides a practical entry point for schools that want a cleaner surveillance experience.",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-3 rounded-xl border border-[#ece7d2] bg-[#faf8ef] px-4 py-3 text-sm leading-6 text-[#374151]"
-                    >
-                      <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#d1af22]" />
-                      <div>{item}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex h-[300px] w-full items-center justify-center overflow-hidden rounded-2xl bg-[#faf8ef]">
-                <img
-                  src={assets.proMobile}
-                  alt="Mobile video operations"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+   
 
         <section className="border-t border-[#ddd9c8] bg-[#f6f5ef] px-6 py-24 md:px-10">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.02fr_0.98fr]">
