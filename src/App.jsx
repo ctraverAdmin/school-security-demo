@@ -504,47 +504,44 @@ export default function AxisSchoolSecurityBrochure() {
             <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#fff5c8] blur-3xl" />
             <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white blur-3xl" />
           </div>
-
- <div className="w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
-  <div className="px-8 py-8 md:px-14 lg:px-20">
+          
+          <div className="w-full border-b border-[#d9d7c8] bg-[#f3f1ea]">
+  <div className="flex items-center px-0 py-0 md:px-1 lg:px-0">
     
-    {/* ROW 1: LOGO + NAME */}
-    <div className="flex items-center">
-      <img
-        src="/logo.png"
-        alt="Northeast Data"
-        className="h-auto w-[180px] md:w-[240px] lg:w-[320px] object-contain -mr-6"
-      />
+    {/* LOGO */}
+    <img
+  src="/logo.png"
+  alt="Northeast Data"
+  className="block h-[380px] w-[180px] md:w-[540px] lg:w-[420px] object-contain -mr-6"
+/>
 
+    {/* TEXT BLOCK */}
+    <div>
       <div className="flex items-baseline gap-3">
-        <span className="font-montserrat text-4xl font-semibold text-[#111827] md:text-6xl lg:text-7xl">
+        <span className="font-montserrat text-4xl font-semibold text-[#111827] md:text-6xl lg:text-8xl">
           NORTHEAST
         </span>
-        <span className="font-montserrat text-4xl font-semibold text-red-600 md:text-6xl lg:text-7xl">
+        <span className="font-montserrat text-4xl font-semibold text-red-600 md:text-6xl lg:text-8xl">
           DATA
         </span>
       </div>
-    </div>
 
-    {/* ROW 2: TAGLINE LEFT, CONTACT RIGHT */}
-    <div className="mt-4 flex justify-between items-start">
-      
-      {/* TAGLINE (LEFT) */}
-      <div className="text-sm text-[#6b7280] md:text-base lg:text-lg">
+      {/* TAGLINE */}
+      <div className="text-sm text-[#6b7280] md:text-base">
         Network Integration &amp; Security Solutions
       </div>
 
-      {/* CONTACT (RIGHT) */}
-      <div className="text-right text-sm leading-6 text-[#8b949e] md:text-base">
+      {/* 👇 CONTACT NOW UNDER DATA */}
+      <div className="ml-[750px] text-sm leading-5 text-[#8b949e] md:text-base font-bold">
         <div>nedatainfo@northeastdata.com</div>
         <div>www.northeastdata.com</div>
         <div>Serving PA &amp; Nationwide</div>
       </div>
-
     </div>
 
   </div>
 </div>
+
 
           <div className="relative z-10 mx-auto max-w-full px-1 py-0 md:px-0 md:py-0">
             <motion.div
